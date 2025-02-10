@@ -45,10 +45,6 @@ export function FeatureBlockTemplates({
       },
     // Add more default features as needed
   ],
-  competitors: _competitors = [
-    { name: "Evernote", logo: "/evernote.svg" },
-    // Add more default competitors
-  ],
   screenshotSrc = "/screenshot-editor.png",
 }: FeatureBlockProps) {
   return (
