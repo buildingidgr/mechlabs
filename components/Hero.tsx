@@ -1,11 +1,11 @@
 'use client'
 
+import { useState } from "react"
 import Image from "next/image"
+import { BetaDialog } from "./beta"
+import { FeaturesSectionWithHoverEffects } from "./blocks/feature-section-with-hover-effects"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { FeaturesSectionWithHoverEffects } from "./blocks/feature-section-with-hover-effects"
-import { useState } from "react"
-import { BetaDialog } from "./beta"
 
 export default function Hero() {
   const [isOpen, setIsOpen] = useState(false);

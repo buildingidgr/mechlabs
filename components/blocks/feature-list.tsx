@@ -1,7 +1,7 @@
 'use client'
 
-import Image from "next/image";
 import { useState } from "react";
+import Image from "next/image";
 import { BetaDialog } from "@/components/beta";
 
 interface FeatureItem {
@@ -46,7 +46,7 @@ export function FeatureList({
       iconSrc: "/projects.svg"
     },
     {
-      title: "Building AI",
+      title: "Mechlabs AI",
       description: "Βρίσκει και κάνει αυτό που ζητάς",
       href: "/ai",
       iconSrc: "/code1.svg"

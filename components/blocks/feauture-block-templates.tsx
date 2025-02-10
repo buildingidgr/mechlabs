@@ -1,8 +1,7 @@
 'use client'
 
-import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 import { BetaDialog } from "@/components/beta";
 
 interface FeatureItem {
@@ -21,7 +20,6 @@ interface FeatureBlockProps {
   heading?: string;
   description?: string;
   linkText?: string;
-  linkHref?: string;
   features?: FeatureItem[];
   competitors?: CompetitorItem[];
   screenshotSrc?: string;
@@ -32,7 +30,6 @@ export function FeatureBlockTemplates({
   heading = "Έτοιμα πρότυπα για μηχανικούς",
   description = "Επιλέξτε από μια μεγάλη λίστα προτύπων και ολοκληρώστε τα έργα σας πιο γρήγορα και αποδοτικά.",
   linkText = "Join waiting list for private Beta",
-  linkHref = "/product/docs",
   features = [
     {
       title: "Έτοιμα Πρότυπα",
