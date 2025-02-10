@@ -250,16 +250,16 @@ export function FaqSection({ id }: FaqSectionProps) {
   return (
     <section id={id} className="relative z-10 py-24 scroll-mt-32">
       <div className="max-w-5xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+        <div className="text-left mb-16">
+          <h2 className="text-4xl font-bold flex">
             Συχνές Ερωτήσεις
           </h2>
-          <p className="mt-4 text-lg text-neutral-600 dark:text-neutral-400">
+          <p className="w-full mt-4 text-lg">
             Βρείτε απαντήσεις στις πιο συχνές ερωτήσεις για την πλατφόρμα μας
           </p>
           
           {/* Search Bar */}
-          <div className="mt-8 max-w-2xl mx-auto">
+          <div className="mt-8 max-w-2xl">
             <div className="relative">
               <IconSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-neutral-400" />
               <input
