@@ -11,7 +11,7 @@ export function FeaturesSectionWithHoverEffects() {
     {
       title: "Από μηχανικούς για μηχανικούς",
       description:
-        "Η πλατφόρμα της BuildingID φτιάχτηκε για να αποτελέσει τη γέφυρα μεταξύ της αγοράς και του μηχανικού",
+        "Η πλατφόρμα της Mechlabs δημιουργήθηκε για να φέρει πιο κοντά την αγορά και τον μηχανικό",
       icon: <IconTerminal2 />,
     },
     {

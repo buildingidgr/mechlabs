@@ -11,25 +11,23 @@ export function FaqSection() {
   return (
     <section className="flex justify-center container mx-auto px-4 py-24">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-3xl font-bold text-primary mb-12">Common Questions</h2>
+        <h2 className="text-3xl font-bold text-primary mb-12">Συχνές Ερωτήσεις</h2>
         
         <Accordion type="single" collapsible className="w-full">
           {/* Item 1 */}
           <AccordionItem value="item-1">
             <AccordionTrigger className="hover:no-underline text-left">
-              <h3 className="text-xl flex items-center font-semibold">What does your platform offer?</h3>
+              <h3 className="text-xl flex items-center font-semibold">Πώς βρίσκω νέα έργα;</h3>
             </AccordionTrigger>
             <AccordionContent className="pt-4 text-lg text-gray-600 space-y-4">
               <p>
-                Our platform provides a comprehensive suite of tools for document management,
-                collaboration, and project tracking. Key features include:
+                Η πλατφόρμα μας προσφέρει προηγμένα εργαλεία αναζήτησης:
               </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>AI-powered document processing</li>
-                <li>Real-time collaboration tools</li>
-                <li>Advanced search and organization</li>
-                <li>Cross-platform synchronization</li>
-                <li>Enterprise-grade security</li>
+                <li>Χαρτογραφημένη προβολή έργων σε πραγματικό χρόνο</li>
+                <li>Φίλτρα αναζήτησης βάσει ειδικότητας και τοποθεσίας</li>
+                <li>Ειδοποιήσεις για νέες ευκαιρίες</li>
+                <li>Δυνατότητα αποθήκευσης αναζητήσεων</li>
               </ul>
             </AccordionContent>
           </AccordionItem>
@@ -37,55 +35,48 @@ export function FaqSection() {
           {/* Item 2 */}
           <AccordionItem value="item-2">
             <AccordionTrigger className="hover:no-underline text-left">
-              <h3 className="text-xl font-semibold">How does your pricing work?</h3>
+              <h3 className="text-xl font-semibold">Πώς λειτουργεί η πιστοποίηση;</h3>
             </AccordionTrigger>
             <AccordionContent className="pt-4 text-lg text-gray-600 space-y-4">
-              <p>We offer three simple pricing tiers:</p>
+              <p>Η διαδικασία πιστοποίησης περιλαμβάνει:</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li><strong>Basic:</strong> Free for individual users with core features</li>
-                <li><strong>Pro:</strong> $9.99/month for advanced features and team collaboration</li>
-                <li><strong>Enterprise:</strong> Custom pricing for large organizations</li>
+                <li>Ολοκληρωμένο εκπαιδευτικό πρόγραμμα</li>
+                <li>Πρακτικές ασκήσεις και τεστ γνώσεων</li>
+                <li>Ετήσια ανανέωση πιστοποίησης</li>
+                <li>Διαθεσιμότητα online υλικού 24/7</li>
               </ul>
-              <p>All plans come with a 30-day money-back guarantee.</p>
             </AccordionContent>
           </AccordionItem>
 
           {/* Item 3 */}
           <AccordionItem value="item-3">
             <AccordionTrigger className="hover:no-underline text-left">
-              <h3 className="text-xl font-semibold">Is my data secure?</h3>
+              <h3 className="text-xl font-semibold">Μπορώ να χρησιμοποιήσω δικά μου πρότυπα;</h3>
             </AccordionTrigger>
             <AccordionContent className="pt-4 text-lg text-gray-600 space-y-4">
               <p>
-                Security is our top priority. We use:
+                Η πλατφόρμα υποστηρίζει:
               </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>End-to-end encryption</li>
-                <li>Two-factor authentication</li>
-                <li>Regular security audits</li>
-                <li>GDPR-compliant data handling</li>
+                <li>Εισαγωγή προσαρμοσμένων προτύπων</li>
+                <li>Διαχείριση βιβλιοθήκης εγγράφων</li>
+                <li>Συνδυασμό με τα έτοιμα πρότυπα της πλατφόρμας</li>
+                <li>Ασφαλή αποθήκευση στο cloud</li>
               </ul>
-              <p>
-                Your documents and data remain private and under your control at all times.
-              </p>
             </AccordionContent>
           </AccordionItem>
 
           {/* Item 4 */}
           <AccordionItem value="item-4">
             <AccordionTrigger className="hover:no-underline text-left">
-              <h3 className="text-xl font-semibold">Can I collaborate with team members?</h3>
+              <h3 className="text-xl font-semibold">Πώς βοηθάει το AI στον επεξεργαστή;</h3>
             </AccordionTrigger>
             <AccordionContent className="pt-4 text-lg text-gray-600 space-y-4">
-              <p>
-                Yes! Our platform offers robust collaboration features:
-              </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Real-time document editing</li>
-                <li>Comments and annotations</li>
-                <li>Version control</li>
-                <li>Task assignments</li>
-                <li>Team permissions management</li>
+                <li>Αυτόματη μορφοποίηση εγγράφων</li>
+                <li>Προτάσεις βάσει νομοθεσίας</li>
+                <li>Έξυπνη αναζήτηση σε τεχνική βιβλιοθήκη</li>
+                <li>Επιλογή σχετικών προτύπων</li>
               </ul>
             </AccordionContent>
           </AccordionItem>
@@ -93,40 +84,45 @@ export function FaqSection() {
           {/* Item 5 */}
           <AccordionItem value="item-5">
             <AccordionTrigger className="hover:no-underline text-left">
-              <h3 className="text-xl font-semibold">How does the AI integration work?</h3>
+              <h3 className="text-xl font-semibold">Τι περιλαμβάνει η γνωσιακή βάση;</h3>
             </AccordionTrigger>
             <AccordionContent className="pt-4 text-lg text-gray-600 space-y-4">
-              <p>
-                Our AI features help you work smarter through:
-              </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Smart document suggestions</li>
-                <li>Automated formatting</li>
-                <li>Content generation templates</li>
-                <li>Data extraction tools</li>
-                <li>Predictive organization</li>
+                <li>Ενημερωμένη νομοθεσία</li>
+                <li>Best practices από εμπειρογνώμονες</li>
+                <li>Case studies πραγματικών έργων</li>
+                <li>Βίντεο εκπαιδευτικών σεμιναρίων</li>
               </ul>
-              <p>
-                All AI features are optional and can be disabled at any time.
-              </p>
             </AccordionContent>
           </AccordionItem>
 
           {/* Item 6 */}
           <AccordionItem value="item-6">
             <AccordionTrigger className="hover:no-underline text-left">
-              <h3 className="text-xl font-semibold">How do I get started?</h3>
+              <h3 className="text-xl font-semibold">Πώς γίνεται η συνεργασία με ομάδες;</h3>
             </AccordionTrigger>
             <AccordionContent className="pt-4 text-lg text-gray-600 space-y-4">
-              <p>Starting is easy:</p>
-              <ol className="list-decimal pl-6 space-y-2">
-                <li>Create a free account</li>
-                <li>Choose your plan</li>
-                <li>Upload or create your first document</li>
-                <li>Invite team members (optional)</li>
-                <li>Explore our template library</li>
-              </ol>
-              <p>Need help? Visit our <a href="/support" className="text-primary underline">support center</a>.</p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Real-time επεξεργασία εγγράφων</li>
+                <li>Συστήματα version control</li>
+                <li>Αποδοχές και σχόλια απευθείας στα έγγραφα</li>
+                <li>Διαχείριση δικαιωμάτων πρόσβασης</li>
+              </ul>
+            </AccordionContent>
+          </AccordionItem>
+
+          {/* Item 7 */}
+          <AccordionItem value="item-7">
+            <AccordionTrigger className="hover:no-underline text-left">
+              <h3 className="text-xl font-semibold">Πώς διασφαλίζεται η ασφάλεια των δεδομένων μου;</h3>
+            </AccordionTrigger>
+            <AccordionContent className="pt-4 text-lg text-gray-600 space-y-4">
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Κρυπτογράφηση end-to-end</li>
+                <li>Καθημερινά backups</li>
+                <li>Πιστοποιήσεις GDPR</li>
+                <li>Διαθεσιμότητα 99.9%</li>
+              </ul>
             </AccordionContent>
           </AccordionItem>
         </Accordion>
