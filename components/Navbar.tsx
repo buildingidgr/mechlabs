@@ -60,9 +60,9 @@ export function Navbar() {
         <Image 
           src="/logo.svg"
           alt="BuildingID Logo"
-          width={40}
-          height={40}
-          className="h-8 w-auto"
+          width={25}
+          height={25}
+          className="h-6 w-auto"
         />
       </Link>
       

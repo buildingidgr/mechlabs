@@ -7,6 +7,8 @@ import { Feature17 } from "@/components/blocks/feauture17";
 import { FeatureBlock } from "@/components/blocks/feature-block";
 import { FeatureBlockEditor } from "@/components/blocks/feauture-block-editor";
 import { FeatureBlockTemplates } from "@/components/blocks/feauture-block-templates";
+import { FeatureBlockProjects } from "@/components/blocks/feature-block-projects";
+import { FeatureBlockLibrary } from "@/components/blocks/feauture-block-library";
 
 export default function Home() {
   return (
@@ -14,8 +16,11 @@ export default function Home() {
       <Hero />
       <FeaturesSectionWithHoverEffects />
       <FeatureBlock />
+      <FeatureBlockProjects />
       <FeatureBlockEditor />
+      <FeatureBlockLibrary />
       <FeatureBlockTemplates />
+    
     <Feature13 />
     <Feature17 />
       <FaqSection />
