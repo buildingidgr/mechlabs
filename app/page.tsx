@@ -6,6 +6,7 @@ import { FaqSection } from "@/components/sections/faq-section"
 import { Feature17 } from "@/components/blocks/feauture17";
 import { FeatureBlock } from "@/components/blocks/feature-block";
 import { FeatureBlockEditor } from "@/components/blocks/feauture-block-editor";
+import { FeatureBlockTemplates } from "@/components/blocks/feauture-block-templates";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <FeaturesSectionWithHoverEffects />
       <FeatureBlock />
       <FeatureBlockEditor />
+      <FeatureBlockTemplates />
     <Feature13 />
     <Feature17 />
       <FaqSection />
