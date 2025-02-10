@@ -34,7 +34,7 @@ export function HeroPillSecond() {
       <HeroPill 
         href="#"
         label="Register with your email →"
-        announcement="📣 Waiting list for Beta opened"
+        announcement="📣 Waiting list for private Beta opened"
         isExternal={false}
         onClick={() => setIsOpen(true)}
         className="cursor-pointer"

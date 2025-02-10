@@ -25,7 +25,7 @@ interface FeatureBlockProps {
 export function FeatureBlockLibrary({
   heading = "Ό,τι χρειάζεσαι, σε ένα μέρος",
   description = "Διαδικασίες, νόμοι, best practices και use cases – όλα συγκεντρωμένα για τους μηχανικούς!",
-  linkText = "Κάντε εγγραφή",
+  linkText = "Join waiting list for private Beta",
   linkHref = "/product/docs",
   features = [
     {

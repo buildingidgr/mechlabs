@@ -7,6 +7,8 @@ import { FeatureBlockLibrary } from "@/components/blocks/feauture-block-library"
 import { FeatureBlockTemplates } from "@/components/blocks/feauture-block-templates";
 import Hero from "@/components/Hero"
 import { FaqSection } from "@/components/sections/faq-section"
+import { FeatureList } from "@/components/blocks/feature-list";
+import { DownloadSection } from "@/components/blocks/download-section";
 
 export default function Home() {
   return (
@@ -18,6 +20,8 @@ export default function Home() {
       <FeatureBlockEditor />
       <FeatureBlockLibrary />
       <FeatureBlockTemplates />
+      <FeatureList />
+      <DownloadSection />
       <FaqSection />
     </main>
   )

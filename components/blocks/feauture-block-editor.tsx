@@ -25,7 +25,7 @@ interface FeatureBlockProps {
 export function FeatureBlockEditor({
   heading = "Ισχυρός επεξεργαστής εγγράφων",
   description = "Έξυπνα εργαλεία, AI, γρήγορη αναζήτηση & εξαγωγή – όλα σε έναν δυναμικό editor!",
-  linkText = "Κάντε εγγραφή",
+  linkText = "Join waiting list for private Beta",
   linkHref = "/product/docs",
   features = [
     {

@@ -11,24 +11,24 @@ export function FeaturesSectionWithHoverEffects() {
     {
       title: "Από μηχανικούς για μηχανικούς",
       description:
-        "Η πλατφόρμα της Mechlabs δημιουργήθηκε για να φέρει πιο κοντά την αγορά και τον μηχανικό",
+        "Γνωρίζουμε τις προκλήσεις γιατί τις ζούμε. Φέρνουμε κοντά σας τις ευκαιρίες που αξίζετε",
       icon: <IconTerminal2 />,
     },
     {
-      title: "Σκοπός",
+      title: "Το όραμά μας είναι απλό",
       description:
-        "Σκοπός μας είναι να μεγαλώσουμε την ομάδα μας με μηχανικούς προς όφελος όλων.",
+        "Χτίζουμε την καλύτερη κοινότητα μηχανικών. Μεγαλώνουμε και πετυχαίνουμε μαζί",
       icon: <IconEaseInOut />,
     },
     {
-      title: "Κέντρο πληροφόρησης",
+      title: "Η γνώση στα χέρια σας",
       description:
-        "Αποτελεί το κέντρο πληροφόρησης τη σκέπη (νομική και τεχνική) όλων των μηχανικών που δραστηριοποιούνται στο πεδίο.",
+        "Τεχνικά και νομικά θέματα, όλα εδώ. Για να δουλεύετε με σιγουριά, χωρίς άγχος",
       icon: <IconCurrencyDollar />,
     },
     {
-      title: "Υποστήριξη",
-      description: "Επιμορφώνει, πιστοποιεί, υποστηρίζει τους μηχανικούς και τους φέρνει σε επαφή με τους πολίτες.",
+      title: "Μεγαλώνουμε μαζί σας",
+      description: "Νέες γνώσεις, νέοι πελάτες, νέες ευκαιρίες. Είμαστε δίπλα σας σε κάθε βήμα της επαγγελματικής σας ανάπτυξης",
       icon: <IconCloud />,
     },
 
@@ -56,7 +56,7 @@ const Feature = ({
   return (
     <div
       className={cn(
-        "flex flex-col lg:border-r  py-10 relative group/feature dark:border-neutral-800",
+        "flex flex-col lg:border-r  py-2 relative group/feature dark:border-neutral-800",
         (index === 0 || index === 4) && "lg:border-l dark:border-neutral-800",
         index < 4 && "lg:border-b dark:border-neutral-800"
       )}

@@ -25,7 +25,7 @@ interface FeatureBlockProps {
 export function FeatureBlockTemplates({
   heading = "Έτοιμα πρότυπα για μηχανικούς",
   description = "Επιλέξτε από μια μεγάλη λίστα προτύπων και ολοκληρώστε τα έργα σας πιο γρήγορα και αποδοτικά.",
-  linkText = "Κάντε εγγραφή",
+  linkText = "Join waiting list for private Beta",
   linkHref = "/product/docs",
   features = [
     {
