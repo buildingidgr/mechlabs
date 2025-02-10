@@ -38,7 +38,7 @@ export function FeaturesSectionWithHoverEffects({ id }: FeaturesSectionWithHover
 
   ];
   return (
-    <section id={id} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 relative z-10 py-10 pt-28 max-w-7xl mx-auto">
+    <section id={id} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 relative z-10 py-10 pt-28 max-w-7xl mx-auto scroll-mt-32">
       {features.map((feature, index) => (
         <Feature key={feature.title} {...feature} index={index} />
       ))}

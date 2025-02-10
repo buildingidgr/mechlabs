@@ -50,7 +50,7 @@ export function FeatureBlock({
   screenshotSrc = "/opportunity.png",
 }: FeatureBlockProps) {
   return (
-    <section id={id} className="py-12 pt-28">
+    <section id={id} className="py-12 scroll-mt-32 mt-16">
       <div className="container max-w-7xl mx-auto px-4">
         <div className="grid items-end md:grid-cols-12 gap-24 md:gap-24 mb-8 md:mb-12">
           <article className="md:col-span-5 space-y-3 md:space-y-4">

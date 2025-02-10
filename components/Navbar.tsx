@@ -12,6 +12,31 @@ import {
   NavigationMenuContent,
 } from "@/components/ui/navigation-menu"
 
+function smoothScrollTo(targetPosition: number, duration: number) {
+  const startPosition = window.pageYOffset
+  const distance = targetPosition - startPosition
+  let startTime: number | null = null
+
+  function animation(currentTime: number) {
+    if (startTime === null) startTime = currentTime
+    const timeElapsed = currentTime - startTime
+    const progress = Math.min(timeElapsed / duration, 1)
+
+    // Easing function: easeInOutCubic
+    const ease = progress < 0.5
+      ? 4 * progress * progress * progress
+      : 1 - Math.pow(-2 * progress + 2, 3) / 2
+
+    window.scrollTo(0, startPosition + distance * ease)
+
+    if (timeElapsed < duration) {
+      requestAnimationFrame(animation)
+    }
+  }
+
+  requestAnimationFrame(animation)
+}
+
 export function Navbar() {
   return (
     <div className="sticky top-11 z-50 w-full border-b bg-background h-16 flex flex-row items-center pl-4">
@@ -46,10 +71,11 @@ export function Navbar() {
                         e.preventDefault()
                         const target = document.getElementById(section)
                         if (target) {
-                          window.scrollTo({
-                            behavior: 'smooth',
-                            top: target.offsetTop - 100
-                          })
+                          const headerOffset = 120
+                          const elementPosition = target.getBoundingClientRect().top
+                          const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+
+                          smoothScrollTo(offsetPosition, 1000) // 1000ms = 1 second duration
                         }
                       }}
                     >

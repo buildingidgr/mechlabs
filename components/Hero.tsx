@@ -7,8 +7,8 @@ import { FeaturesSectionWithHoverEffects } from "./blocks/feature-section-with-h
 
 export default function Hero() {
   return (
-    <div className="flex flex-col bg-background mt-2 relative">
-      <div className="grid lg:grid-cols-[2fr_1.5fr] gap-2 items-center">
+    <div className="flex flex-col bg-background relative">
+      <div className="grid lg:grid-cols-[2fr_1.5fr] gap-2 items-center min-h-[calc(100vh-40rem)] pt-16">
         {/* Left Content */}
         <div className="px-4 lg:px-12 py-12">
           <div className="space-y-2">
@@ -27,7 +27,7 @@ export default function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button size="lg" className="bg-primary hover:bg-primary/90">
-                 Λίστα αναμονής (Private Beta)
+                 Join waiting list for private Beta
               </Button>
             </div>
           </div>
@@ -47,8 +47,8 @@ export default function Hero() {
       </div>
       
       {/* Features Section */}
-      <div className="mt-12">
-        <FeaturesSectionWithHoverEffects id="opportunities" />
+      <div className="mt-12 scroll-mt-32" id="opportunities">
+        <FeaturesSectionWithHoverEffects />
       </div>
     </div>
   )
