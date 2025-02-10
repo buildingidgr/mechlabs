@@ -1,5 +1,9 @@
+'use client'
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import { BetaDialog } from "@/components/beta";
 
 interface FeatureItem {
   title: string;
@@ -49,6 +53,8 @@ export function FeatureBlockTemplates({
   ],
   screenshotSrc = "/templates.png",
 }: FeatureBlockProps) {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
   return (
     <section id={id} className="py-12 pt-28">
       <div className="container max-w-7xl mx-auto px-4">
@@ -64,15 +70,16 @@ export function FeatureBlockTemplates({
             }}>
               {description}
             </p>
-            <Link
-              href={linkHref}
+            <button
+              onClick={() => setIsDialogOpen(true)}
               className="inline-flex items-center text-primary hover:text-primary/90 transition-colors group font-medium text-sm"
             >
               <span>{linkText}</span>
               <span className="ml-2 group-hover:translate-x-1 transition-transform">
                 →
               </span>
-            </Link>
+            </button>
+            <BetaDialog isOpen={isDialogOpen} setIsOpen={setIsDialogOpen} />
           </article>
 
           <ul className="md:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-2">

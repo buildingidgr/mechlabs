@@ -12,10 +12,10 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <FeatureBlock id="projects" />
-      <FeatureBlockProjects id="pages" />
-      <FeatureBlockEditor id="knowledge-base" />
-      <FeatureBlockLibrary id="library" />
+      <FeatureBlock id="opportunities" />
+      <FeatureBlockProjects id="projects" />
+      <FeatureBlockEditor id="pages" />
+      <FeatureBlockLibrary id="knowledge-base" />
       <FeatureBlockTemplates id="templates" />
       <FeatureList id="features" />
       <FaqSection id="faq" />

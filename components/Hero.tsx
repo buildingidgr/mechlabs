@@ -4,8 +4,12 @@ import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { FeaturesSectionWithHoverEffects } from "./blocks/feature-section-with-hover-effects"
+import { useState } from "react"
+import { BetaDialog } from "./beta"
 
 export default function Hero() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="flex flex-col bg-background relative">
       <div className="grid lg:grid-cols-[2fr_1.5fr] gap-2 items-center min-h-[calc(100vh-40rem)] pt-16">
@@ -26,7 +30,7 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90">
+              <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={() => setIsOpen(true)}>
                  Join waiting list for private Beta
               </Button>
             </div>
@@ -50,6 +54,8 @@ export default function Hero() {
       <div className="mt-12 scroll-mt-32" id="opportunities">
         <FeaturesSectionWithHoverEffects />
       </div>
+
+      <BetaDialog isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
   )
 } 

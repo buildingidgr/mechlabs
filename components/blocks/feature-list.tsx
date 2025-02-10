@@ -1,4 +1,8 @@
+'use client'
+
 import Image from "next/image";
+import { useState } from "react";
+import { BetaDialog } from "@/components/beta";
 
 interface FeatureItem {
   title: string;
@@ -56,15 +60,21 @@ export function FeatureList({
     
   ]
 }: FeatureListProps) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <section id={id} className="py-12 container max-w-6xl mx-auto px-4 scroll-mt-32">
+    <section id={id} className="py-12 container max-w-7xl mx-auto px-4 scroll-mt-32">
       <header className="mb-20 max-w-[50%]">
         <h2 className="text-7xl font-bold text-foreground mb-16">{heading}</h2>
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {features.map((feature, index) => (
-          <div key={index} className="relative pb-12 rounded-xl">
+          <div 
+            key={index} 
+            className="relative pb-12 rounded-xl cursor-pointer hover:opacity-80 transition-opacity"
+            onClick={() => setIsOpen(true)}
+          >
             <div className="mb-4">
               <div className="w-28 h-24 min-w-24 min-h-24 rounded-lg bg-background p-0 flex items-center justify-center">
                 <Image
@@ -88,6 +98,8 @@ export function FeatureList({
           </div>
         ))}
       </div>
+
+      <BetaDialog isOpen={isOpen} setIsOpen={setIsOpen} />
     </section>
   );
 } 

@@ -13,6 +13,44 @@ import {
 import { HeroPill } from "@/components/ui/hero-pill"
 import { Input } from "@/components/ui/input";
 
+export function BetaDialog({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: (isOpen: boolean) => void }) {
+  const [email, setEmail] = useState("");
+
+  return (
+    <AlertDialog open={isOpen} onOpenChange={setIsOpen}>
+      <AlertDialogContent>
+        <AlertDialogHeader>
+          <AlertDialogTitle>Join Beta Waiting List</AlertDialogTitle>
+          <AlertDialogDescription>
+            Enter your email to get early access to our beta program.
+          </AlertDialogDescription>
+        </AlertDialogHeader>
+        
+        <Input 
+          type="email" 
+          placeholder="Email address"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="mt-4"
+        />
+
+        <AlertDialogFooter className="mt-6">
+          <AlertDialogCancel>Cancel</AlertDialogCancel>
+          <AlertDialogAction 
+            onClick={() => {
+              // Add your submission logic here
+              console.log("Submitted email:", email);
+              setIsOpen(false);
+            }}
+          >
+            Submit
+          </AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
+  );
+}
+
 export function HeroPillFirst() {
   return (
     <HeroPill 
@@ -27,7 +65,6 @@ export function HeroPillFirst() {
 
 export function HeroPillSecond() {
   const [isOpen, setIsOpen] = useState(false);
-  const [email, setEmail] = useState("");
 
   return (
     <>
@@ -39,38 +76,7 @@ export function HeroPillSecond() {
         onClick={() => setIsOpen(true)}
         className="cursor-pointer"
       />
-
-      <AlertDialog open={isOpen} onOpenChange={setIsOpen}>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>Join Beta Waiting List</AlertDialogTitle>
-            <AlertDialogDescription>
-              Enter your email to get early access to our beta program.
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          
-          <Input 
-            type="email" 
-            placeholder="Email address"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="mt-4"
-          />
-
-          <AlertDialogFooter className="mt-6">
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction 
-              onClick={() => {
-                // Add your submission logic here
-                console.log("Submitted email:", email);
-                setIsOpen(false);
-              }}
-            >
-              Submit
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
+      <BetaDialog isOpen={isOpen} setIsOpen={setIsOpen} />
     </>
   );
 }
