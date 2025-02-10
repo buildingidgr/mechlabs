@@ -1,11 +1,4 @@
-import {
-    DollarSign,
-    MessagesSquare,
-    PersonStanding,
-    Timer,
-    Zap,
-    ZoomIn,
-  } from "lucide-react";
+
 import Image from "next/image"
   
   interface Feature {

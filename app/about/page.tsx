@@ -1,4 +1,3 @@
-import { Accordion, AccordionItem } from "@/components/ui/accordion"
 
 export default function About() {
   return (

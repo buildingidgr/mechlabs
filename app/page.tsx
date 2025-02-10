@@ -1,5 +1,4 @@
 import Hero from "@/components/Hero"
-import { Navbar } from "@/components/Navbar"  
 import React from "react";
 import { FeaturesSectionWithHoverEffects } from "@/components/blocks/feature-section-with-hover-effects";
 import { Feature13 } from "@/components/feauture1";
