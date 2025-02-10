@@ -342,7 +342,7 @@ interface FaqItemProps {
   index: number;
 }
 
-function FaqItem({ faq, index }: FaqItemProps) {
+function FaqItem({ faq, index: _index }: FaqItemProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (

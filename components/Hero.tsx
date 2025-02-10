@@ -14,7 +14,7 @@ export default function Hero() {
           <div className="space-y-2">
             <div>
               <Badge variant="secondary" className="mb-2">
-                Private Beta
+                Private Beta coming soon...
               </Badge>
               <h1 className="text-4xl lg:text-7xl font-bold text-foreground leading-tight">
               Η πλατφόρμα των μηχανικών

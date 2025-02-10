@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 
 interface FeatureItem {
@@ -50,7 +49,7 @@ export function FeatureList({
     },
     {
       title: "Πρότυπα",
-      description: "1000+ έτοιμα πρότυπα για να ξεκινήσεις αμέσως",
+      description: "Έτοιμα πρότυπα για να ξεκινήσεις αμέσως",
       href: "/templates",
       iconSrc: "/templates.svg"
     }
@@ -58,7 +57,7 @@ export function FeatureList({
   ]
 }: FeatureListProps) {
   return (
-    <section id={id} className="py-12 container max-w-7xl mx-auto px-4 scroll-mt-32">
+    <section id={id} className="py-12 container max-w-6xl mx-auto px-4 scroll-mt-32">
       <header className="mb-20 max-w-[50%]">
         <h2 className="text-7xl font-bold text-foreground mb-16">{heading}</h2>
       </header>
