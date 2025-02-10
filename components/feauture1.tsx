@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface Feature {
     id: string;
     title: string;
@@ -81,9 +83,11 @@ interface Feature {
                     <h3 className="text-2xl md:text-4xl">{feature.title}</h3>
                   </div>
                   <div className="relative w-2/5 shrink-0 rounded-r-lg flex items-end justify-start h-full">
-                    <img
+                    <Image
                       src={feature.image}
                       alt={feature.title}
+                      width={200}
+                      height={200}
                       className="object-contain w-full h-full max-h-[200px] max-w-[200px]"
                     />
                   </div>
