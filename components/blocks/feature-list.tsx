@@ -14,7 +14,7 @@ interface FeatureListProps {
 }
 
 export function FeatureList({
-  heading = "Όλα όσα χρειάζεσαι για την καλύτερη δουλειά",
+  heading = "Όλα τα εργαλεία σε ένα μέρος",
   features = [
     {
       title: "Έγγραφα",
@@ -38,7 +38,7 @@ export function FeatureList({
       title: "Building AI",
       description: "Βρίσκει αυτό που χρειάζεσαι. Κάνει αυτό που χρειάζεσαι",
       href: "/ai",
-      iconSrc: "/ai.svg"
+      iconSrc: "/code1.svg"
     },
     {
       title: "Πρότυπα",
@@ -51,32 +51,32 @@ export function FeatureList({
   return (
     <section className="py-12 container max-w-7xl mx-auto px-4">
       <header className="mb-16">
-        <h2 className="text-4xl font-bold text-foreground mb-4">{heading}</h2>
+        <h2 className="text-7xl font-bold text-foreground mb-2">{heading}</h2>
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {features.map((feature, index) => (
-          <div key={index} className="group relative p-6 rounded-xl hover:bg-accent/10 transition-colors">
+          <div key={index} className="group relative pb-12 rounded-xl hover:bg-accent/10 transition-colors">
             <Link href={feature.href} className="absolute inset-0 z-10" aria-label={feature.title} />
             
             <div className="mb-4">
-              <div className="w-20 h-20 rounded-lg bg-background p-2">
+              <div className="w-28 h-24 min-w-24 min-h-24 rounded-lg bg-background p-0 flex items-center justify-center">
                 <Image
                   src={feature.iconSrc}
                   alt=""
-                  width={80}
-                  height={80}
-                  className="object-contain w-full h-full"
+                  width={120}
+                  height={120}
+                  className="object-contain w-full h-full aspect-square"
                 />
               </div>
             </div>
 
             <div className="space-y-2">
-              <h3 className="text-xl font-semibold flex items-center">
+              <h3 className="text-2xl font-bold flex items-center">
                 {feature.title}
-                <span className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                <span className="ml-0 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
               </h3>
-              <p className="text-muted-foreground font-medium leading-relaxed">
+              <p className="text-muted-foreground font-semibold leading-tight text-xl">
                 {feature.description}
               </p>
             </div>

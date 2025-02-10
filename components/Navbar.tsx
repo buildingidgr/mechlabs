@@ -12,44 +12,43 @@ import {
 
 export function Navbar() {
   return (
-    <div className="sticky top-11 z-50 w-full border-b bg-background h-14 flex items-center pl-4">
-      <div className="flex items-center w-full max-w-7xl mx-auto">
-        <Link href="/" className="flex items-center mr-6">
+    <div className="sticky top-11 z-50 w-full border-b bg-background h-16 flex flex-row items-center pl-4">
+        <Link href="/">
           <Image 
             src="/logo.svg"
-            alt="BuildingID Logo"
-            width={16}
-            height={16}
-            className="h-6 w-auto"
+            alt="Mechlabs Logo"
+            width={20}
+            height={20}
+            className="h-8 w-auto"
           />
         </Link>
-        
-        <NavigationMenu className="w-full">
-          <NavigationMenuList className="justify-start w-auto gap-1">
+        <div className="flex-grow pt-2">
+        <NavigationMenu>
+          <NavigationMenuList className="gap-1">
             <NavigationMenuItem>
               <Link href="/getting-started" legacyBehavior passHref>
-                <NavigationMenuLink className="px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground rounded-md">
-                  Getting started
+                <NavigationMenuLink className="px-4 py-2 text-base font-medium hover:bg-accent hover:text-accent-foreground rounded-md">
+                  Product
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/components" legacyBehavior passHref>
-                <NavigationMenuLink className="px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground rounded-md">
-                  Components
+                <NavigationMenuLink className="px-4 py-2 text-base font-medium hover:bg-accent hover:text-accent-foreground rounded-md">
+                  About
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/docs" legacyBehavior passHref>
-                <NavigationMenuLink className="px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground rounded-md">
-                  Documentation
+                <NavigationMenuLink className="px-4 py-2 text-base font-medium hover:bg-accent hover:text-accent-foreground rounded-md">
+                  Terms
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
       </div>
-    </div>
+      </div>
   )
 }

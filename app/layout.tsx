@@ -20,7 +20,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Mechlabs | Η Πλατφόρμα των Μηχανικών",
-  description: "Η κορυφαία πλατφόρμα σύνδεσης ιδιοκτητών ακινήτων και μηχανικών",
+  description: "Η κορυφαία πλατφόρμα των μηχανικών",
   keywords: ["ταυτότητα κτιρίου", "μηχανικοί", "ακίνητα", "τεχνικά σχέδια", "κτίρια"],
 };
 

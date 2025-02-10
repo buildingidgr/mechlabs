@@ -42,7 +42,7 @@ export default function Hero() {
           <div className="relative w-full h-full min-h-[500px] rounded-l-4xl lg:block z-10">
             <div className="absolute inset-0" />
             <Image
-              src="/hero-image.svg"
+              src="/hero-image.png"
               alt="Τεχνικό Σχέδιο Μηχανικής"
               fill
               className="object-contain object-left w-full h-full"

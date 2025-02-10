@@ -29,9 +29,9 @@ export function HeroPill({
         }
       }}
       className={cn(
-        "flex w-auto items-center justify-center space-x-2 mb-2",
+        "flex w-auto items-center justify-center space-x-2 mb-0",
         "bg-foreground ring-1 ring-accent",
-        "px-2 py-2 whitespace-pre",
+        "px-2 py-4 whitespace-pre",
         className
       )}
       initial={{ opacity: 0, y: -20 }}
@@ -39,7 +39,7 @@ export function HeroPill({
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       <div className={cn(
-        "w-fit rounded-sm bg-accent px-2 py-1",
+        "w-fit rounded-sm bg-accent px-2 py-0",
         "text-xs font-medium text-foreground sm:text-sm",
         "text-center"
       )}>

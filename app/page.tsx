@@ -21,7 +21,7 @@ export default function Home() {
       <FeatureBlockLibrary />
       <FeatureBlockTemplates />
       <FeatureList />
-      <DownloadSection />
+  
       <FaqSection />
     </main>
   )
