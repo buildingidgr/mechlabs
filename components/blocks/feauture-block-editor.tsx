@@ -120,30 +120,7 @@ export function FeatureBlockEditor({
           />
         </div>
 
-        <div className="border-t pt-12">
-          <h4 className="text-sm font-medium text-muted-foreground mb-6">
-            Replaces
-          </h4>
-          <ul className="flex flex-wrap gap-4">
-            {competitors.map((competitor, index) => (
-              <li
-                key={index}
-                className="flex items-center gap-2 px-3 py-2 bg-accent/5 rounded-lg"
-              >
-                <Image
-                  src={competitor.logo}
-                  alt={`${competitor.name} logo`}
-                  width={20}
-                  height={20}
-                  className="opacity-60"
-                />
-                <span className="text-sm text-muted-foreground">
-                  {competitor.name}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
+
       </div>
     </section>
   );

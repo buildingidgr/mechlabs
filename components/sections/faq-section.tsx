@@ -11,171 +11,124 @@ export function FaqSection() {
   return (
     <section className="flex justify-center container mx-auto px-4 py-24">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-3xl font-bold text-primary mb-12">Συχνές Ερωτήσεις</h2>
+        <h2 className="text-3xl font-bold text-primary mb-12">Common Questions</h2>
         
         <Accordion type="single" collapsible className="w-full">
           {/* Item 1 */}
           <AccordionItem value="item-1">
             <AccordionTrigger className="hover:no-underline text-left">
-              <h3 className="text-xl flex items-center font-semibold">Ταυτότητα Κτιρίων: Λίγα λόγια για τις σχετικές διατάξεις</h3>
+              <h3 className="text-xl flex items-center font-semibold">What does your platform offer?</h3>
             </AccordionTrigger>
             <AccordionContent className="pt-4 text-lg text-gray-600 space-y-4">
               <p>
-                Είναι αρκετά αυτά που μπορούν να ειπωθούν για να περιγράψουν το νομικό πλαίσιο που ορίζει ο νόμος 4495/2017. Σκοπός μας λοιπόν, είναι να αποσαφηνίσουμε και να αποδώσουμε με όσο το δυνατόν απλούστερο και κατανοητό τρόπο το περιεχόμενο της έννοιας «Ταυτότητα Κτιρίων».
+                Our platform provides a comprehensive suite of tools for document management,
+                collaboration, and project tracking. Key features include:
               </p>
-              <p>
-                Για πρώτη φορά ο όρος εισήχθη στην ελληνική έννομη τάξη με το νόμο 3843/2010 (ΦΕΚ 62 Ά), ο οποίος οριοθέτησε το περιεχόμενό της και το νομικό πλαίσιο εφαρμογής της στο πλέγμα της πολεοδομικής νομοθεσίας. Σύμφωνα με την παράγραφο 1 του άρθρου 3 του συγκεκριμένου νόμου, «Ταυτότητα Κτιρίου» είναι ο φάκελος που περιλαμβάνει όλα τα στοιχεία του κτιρίου. Ο φάκελος αυτός τηρείται και ενημερώνεται από τους αρμόδιους μηχανικούς και φυλάσσεται από τους ιδιοκτήτες των ακινήτων. Θεσπίστηκε επιπλέον ως υποχρέωση από το νόμο, να φυλάσσεται και αντίγραφο του φακέλου σε ειδικό χώρο εντός του κτιρίου.
-              </p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>AI-powered document processing</li>
+                <li>Real-time collaboration tools</li>
+                <li>Advanced search and organization</li>
+                <li>Cross-platform synchronization</li>
+                <li>Enterprise-grade security</li>
+              </ul>
             </AccordionContent>
           </AccordionItem>
 
           {/* Item 2 */}
           <AccordionItem value="item-2">
             <AccordionTrigger className="hover:no-underline text-left">
-              <h3 className="text-xl font-semibold">Ποια είναι τα δικαιολογητικά που πρέπει να περιέχει ο φάκελος;</h3>
+              <h3 className="text-xl font-semibold">How does your pricing work?</h3>
             </AccordionTrigger>
             <AccordionContent className="pt-4 text-lg text-gray-600 space-y-4">
-              <p>Τα δικαιολογητικά, καθώς και τα στοιχεία πληρότητας ρυθμίζονται στην παράγραφο 1 του άρθρου 54 του νόμου 4495/2017, και είναι τα εξής:</p>
+              <p>We offer three simple pricing tiers:</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Το στέλεχος της οικοδομικής άδειας του κτιρίου, με τις αναθεωρήσεις της</li>
-                <li>Τα σχέδια που συνοδεύουν την οικοδομική άδεια</li>
-                <li>Το πιστοποιητικό ενεργειακής απόδοσης του κτιρίου ή τμημάτων αυτού</li>
-                <li>Το πιστοποιητικό ελέγχου κατασκευής, εφόσον έχει εκδοθεί</li>
-                <li>Δηλώσεις υπαγωγής σε νόμους αναστολής επιβολής κυρώσεων επί αυθαιρέτων</li>
-                <li>Τα σχέδια κατόψεων, τα οποία αποτυπώνουν το κτίριο στην πραγματική του κατάσταση</li>
-                <li>Το δελτίο δομικής τρωτότητας και τη μελέτη στατικής επάρκειας</li>
-                <li>Τον πίνακα χιλιοστών και τη μελέτη κατανομής δαπανών του κτιρίου</li>
-                <li>
-                  <p>Ο φάκελος θα περιλαμβάνει τα προαναφερθέντα στοιχεία και ειδική αναφορά στον αριθμό ΚΑΕΚ του οικοπέδου ή γηπέδου.</p>
-                </li>
+                <li><strong>Basic:</strong> Free for individual users with core features</li>
+                <li><strong>Pro:</strong> $9.99/month for advanced features and team collaboration</li>
+                <li><strong>Enterprise:</strong> Custom pricing for large organizations</li>
               </ul>
+              <p>All plans come with a 30-day money-back guarantee.</p>
             </AccordionContent>
           </AccordionItem>
 
-                    {/* Item 3 */}
-                    <AccordionItem value="item-2">
+          {/* Item 3 */}
+          <AccordionItem value="item-3">
             <AccordionTrigger className="hover:no-underline text-left">
-              <h3 className="text-xl font-semibold">Αν για κάποιους φαντάζουν αρκετά πρέπει να έχουν υπόψη ότι ήδη σήμερα κάθε κτίριο διαθέτει:</h3>
+              <h3 className="text-xl font-semibold">Is my data secure?</h3>
             </AccordionTrigger>
             <AccordionContent className="pt-4 text-lg text-gray-600 space-y-4">
-              <p>Τα δικαιολογητικά, καθώς και τα στοιχεία πληρότητας ρυθμίζονται στην παράγραφο 1 του άρθρου 54 του νόμου 4495/2017, και είναι τα εξής:</p>
+              <p>
+                Security is our top priority. We use:
+              </p>
               <ul className="list-disc pl-6 space-y-2">
-                <li> μία επιφάνεια και χρήση κατά τη δήλωση του Ε9</li>
-                <li>μία περιγραφή στον τίτλο ιδιοκτησίας (αν υπάρχει)</li>
-                <li>μία επιφάνεια και χρήση κατά τη δήλωση στην Κτηματολόγιο Α.Ε.</li>
-                <li>Το πιστοποιητικό ελέγχου κατασκευής, εφόσον έχει εκδοθεί</li>
-                <li>μία επιφάνεια και χρήση στη Δ.Ε.Η. Α.Ε. (αν ηλεκτροδοτείται)Ζ. μία λιγότερο ή περισσότερο λεπτομερή περιγραφή στην οικοδομική άδεια (αν δεν είναι αυθαίρετο ή απολύτως ταυτόσημο με αυτή}</li>
-                <li>μία λεκτική ή σχεδιαστική περιγραφή τακτοποιημένων ή νομιμοποιημένων χώρων με πρόσφατους ή παλαιότερους νόμους</li>
-                <li>πιστοποιητικό ενεργειακής απόδοσης</li>
-                <li>πιθανές διεκδικήσεις από δικαστικές αποφάσεις όμορων ιδιοκτητών ή το δημόσιο (ρυμοτομούμενα, δάση, ρέματα, ακτογραμμές) και διάφορα άλλα πιο ειδικά στοιχεία.</li>
-<p>Φαίνεται λοιπόν, πως αυτή η θεσπισμένη απόπειρα συγκέντρωσης από την πολιτεία αυτών των πολλών αλλά βασικών κατά κανόνα στοιχείων, να αποτελεί αναγνώριση της αναγκαιότητας ένταξης των στοιχείων που σχετίζονται με τα ακίνητα σε ένα πιο «ανθρώπινο» πλαίσιο – περιβάλλον. Ταυτοχρόνως, η υλοποίηση του εγχειρήματος δια της ενσωμάτωσης όλων των παραπάνω σε ένα δικαιολογητικό αποδόθηκε για ακόμη μια φορά στον πολίτη υποχρεώνοντας τον να προβεί σε ενέργειες (και δαπάνες) συγκέντρωσης και αντιστοίχισης των υφιστάμενων δεδομένων πολλών υπηρεσιών.</p>
+                <li>End-to-end encryption</li>
+                <li>Two-factor authentication</li>
+                <li>Regular security audits</li>
+                <li>GDPR-compliant data handling</li>
               </ul>
+              <p>
+                Your documents and data remain private and under your control at all times.
+              </p>
             </AccordionContent>
           </AccordionItem>
 
           {/* Item 4 */}
-          <AccordionItem value="item-3">
+          <AccordionItem value="item-4">
             <AccordionTrigger className="hover:no-underline text-left">
-              <h3 className="text-xl font-semibold">Ποιους ιδιοκτήτες ακινήτων αφορά η Ηλεκτρονική Ταυτότητα Κτιρίου;</h3>
+              <h3 className="text-xl font-semibold">Can I collaborate with team members?</h3>
             </AccordionTrigger>
-            <AccordionContent className="pt-4 text-lg text-gray-600 space-y-4"> 
-              <p className="mb-4">
-                Οι υποχρεώσεις προς τους πολίτες σύμφωνα με το Ν.3843/2010 αφορούσαν αποκλειστικά σε ιδιοκτήτες κτιρίων, των οποίων η οικοδομική τους άδεια εκδόθηκε μετά την 1.1.2011, ήτοι νέο ανεγειρόμενα κτίρια, εν συνεχεία όμως, σύμφωνα με το σχέδιο Προεδρικού Διατάγματος που είχε δημοσιευθεί, θα επεκτείνονταν σε όλα τα υφιστάμενα κτίρια των οποίων η οικοδομική άδεια εκδόθηκε πριν την 1.3.2012 ή και αυτά χωρίς οικοδομική άδεια, με αποτέλεσμα η υποχρέωση να αφορά σε όλα τα κτίσματα της επικράτειας, υφιστάμενα και μελλοντικά και με προθεσμία υποβολής δήλωσης τα 15 έτη.
-              </p>
-
-              <p className="mb-4">
-                Πλέον, στις διατάξεις του Ν.4495/2017 που αφορούν την Η.Τ.Κ., υπάγονται:
-              </p>
-              <ul className="list-disc pl-6 space-y-2 mb-4">
-                <li>Κτίρια που έχουν ανεγερθεί ή ανεγείρονται με βάση οικοδομική άδεια</li>
-                <li>Κτίρια για τα οποία επιτρέπεται η διενέργεια εμπραγμάτων δικαιοπραξιών, σύμφωνα με την παράγραφο 2 του άρθρου 82 του παραπάνω νόμου</li>
-              </ul>
-
-              <p className="mb-4">
-                Η δήλωση Η.Τ.Κ γίνεται ανά κτίριο ή ανά διηρημένη ιδιοκτησία από εξουσιοδοτημένο μηχανικό, ο οποίος συμπληρώνει τα στοιχεία της Ηλεκτρονικής Ταυτότητας του Κτιρίου ή της διηρημένης ιδιοκτησίας και ορίζεται από τον ιδιοκτήτη για κάθε κτίριο ή διηρημένη ιδιοκτησία.
-              </p>
-
-              <p className="mb-4">
-                Ύστερα από τη συμπλήρωση των στοιχείων, εκδίδεται από τον εξουσιοδοτημένο μηχανικό, το Πιστοποιητικό Πληρότητας της Ηλεκτρονικής Ταυτότητας Κτιρίου ή αυτοτελούς διηρημένης ιδιοκτησίας, το οποίο φέρει μοναδικό αριθμό, που δίνεται από το Ηλεκτρονικό Μητρώο, και αναγράφει τον ΚΑΕΚ του οικοπέδου ή γηπέδου.
-              </p>
-
-              <p className="mb-4">
-                Εφόσον συμπληρωθούν από τον εξουσιοδοτημένο μηχανικό τα στοιχεία του Π.Π.Τ.Κ. και εκδοθούν τα σχετικά πιστοποιητικά, δίνεται κωδικός ιδιοκτησίας ο οποίος αποστέλλεται ηλεκτρονικά στον εξουσιοδοτημένο μηχανικό και στον αναφερόμενο στην αίτηση ιδιοκτήτη.
-              </p>
-
+            <AccordionContent className="pt-4 text-lg text-gray-600 space-y-4">
               <p>
-                Ύστερα από την υποβολή της Ηλεκτρονικής Ταυτότητας Κτιρίου, η ενημέρωσή της πραγματοποιείται υποχρεωτικά ύστερα από την εκτέλεση οποιασδήποτε εργασίας στο κτίριο ή στη διηρημένη ιδιοκτησία του, για την οποία απαιτείται οικοδομική άδεια ή έγκριση εργασιών μικρής κλίμακας από δημόσια αρχή.
+                Yes! Our platform offers robust collaboration features:
               </p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Real-time document editing</li>
+                <li>Comments and annotations</li>
+                <li>Version control</li>
+                <li>Task assignments</li>
+                <li>Team permissions management</li>
+              </ul>
             </AccordionContent>
           </AccordionItem>
 
           {/* Item 5 */}
           <AccordionItem value="item-5">
             <AccordionTrigger className="hover:no-underline text-left">
-              <h3 className="text-xl font-semibold">Τι γίνεται με όλους αυτούς που δε συμφωνούν με τις προθέσεις της πολιτείας και δε συμμορφώνονται;</h3>
+              <h3 className="text-xl font-semibold">How does the AI integration work?</h3>
             </AccordionTrigger>
             <AccordionContent className="pt-4 text-lg text-gray-600 space-y-4">
-              <p className="mb-4">
-                Το Ηλεκτρονικό Μητρώο και τα κεντρικά υπολογιστικά συστήματα της Ε.Κ.Χ.Α. Α.Ε., της ΔΕΗ ΑΕ και του Κέντρου Διαλειτουργικότητας του Υπουργείου Οικονομικών που λειτουργεί στη Γενική Γραμματεία Πληροφοριακών Συστημάτων (Γ.Γ.Π.Σ.) διασυνδέονται μόνιμα για την παροχή αμοιβαίας δυνατότητας άμεσης πρόσβασης στα στοιχεία των ηλεκτρονικών αρχείων που τηρούν.
-              </p>
-              
-              <p className="mb-4">
-                Σε περίπτωση όπου από τους σχετικούς ελέγχους διασύνδεσης των ανωτέρω βάσεων δεδομένων προκύπτει ότι:
-              </p>
-              <ul className="list-disc pl-6 space-y-2 mb-4">
-                <li>Δεν τηρήθηκαν οι διατάξεις και οι προθεσμίες αρχικής συμπλήρωσης</li>
-                <li>Δεν έγινε ενημέρωση και περιοδική συμπλήρωση της ταυτότητας του κτιρίου</li>
-              </ul>
-
-              <p className="mb-4">
-                Θα ενημερώνεται άμεσα η αρμόδια ΥΔΟΜ και το Τοπικό Παρατηρητήριο για τον έλεγχο και την καταγραφή τυχόν αυθαιρέτων κατασκευών.
-              </p>
-
               <p>
-                Πέραν της διαπίστωσης αυθαιρέτων κατασκευών, για την παράλειψη συμπλήρωσης των στοιχείων της ταυτότητας του κτιρίου ή για την υποβολή ανακριβών ή λανθασμένων δηλώσεων των στοιχείων, επιβάλλεται πρόστιμο από τον Ειδικό Γραμματέα Επιθεώρησης Περιβάλλοντος και Ενέργειας στον ιδιοκτήτη του ακινήτου. Το πρόστιμο μπορεί να ανέρχεται:
+                Our AI features help you work smarter through:
               </p>
-              <ul className="list-disc pl-6 space-y-2 mt-4">
-                <li>Από διακόσια (200) ευρώ</li>
-                <li>Μέχρι και το δέκα τοις εκατό (10%) της αντικειμενικής αξίας του ακινήτου</li>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Smart document suggestions</li>
+                <li>Automated formatting</li>
+                <li>Content generation templates</li>
+                <li>Data extraction tools</li>
+                <li>Predictive organization</li>
               </ul>
+              <p>
+                All AI features are optional and can be disabled at any time.
+              </p>
             </AccordionContent>
           </AccordionItem>
-          
+
           {/* Item 6 */}
           <AccordionItem value="item-6">
             <AccordionTrigger className="hover:no-underline text-left">
-              <h3 className="text-xl font-semibold">Τι γίνεται με τους αμελείς μηχανικούς και τις περιπτώσεις που ο ιδιοκτήτης σε συνεργασία με τον μηχανικό δε τηρούν τη νόμιμη διαδικασία;</h3>
+              <h3 className="text-xl font-semibold">How do I get started?</h3>
             </AccordionTrigger>
             <AccordionContent className="pt-4 text-lg text-gray-600 space-y-4">
-              <p className="mb-4">
-                Αν κατά τη συμπλήρωση της Ηλεκτρονικής Ταυτότητας κτιρίου ή κατά τους περιοδικούς ελέγχους διαπιστωθεί ότι έχουν συμπληρωθεί ψευδώς στοιχεία ταυτότητας κτιρίου από τον επιβλέποντα ή τον εξουσιοδοτημένο μηχανικό, πέραν των ποινικών κυρώσεων, επιβάλλεται:
-              </p>
-              
-              <ul className="list-disc pl-6 space-y-4 mb-4">
-                <li>
-                  <span className="font-semibold">α)</span> Πρόστιμο από δύο χιλιάδες (2.000) έως είκοσι χιλιάδες (20.000) ευρώ
-                  <ul className="list-disc pl-8 mt-2 space-y-2">
-                    <li>Το ύψος του προστίμου καθορίζεται ανάλογα με την επιφάνεια που δεν έχει αποτυπωθεί στην Ηλεκτρονική Ταυτότητα Κτιρίου</li>
-                  </ul>
-                </li>
-                <li>
-                  <span className="font-semibold">β)</span> Αναστολή άδειας άσκησης επαγγέλματος για διάστημα από δύο (2) έως είκοσι τέσσερις (24) μήνες
-                  <ul className="list-disc pl-8 mt-2 space-y-2">
-                    <li>Η διάρκεια της αναστολής εξαρτάται από τη βαρύτητα της παράβασης</li>
-                  </ul>
-                </li>
-              </ul>
-
-              <p className="mb-4">
-                Τέλος, σύμφωνα με το άρθρο 62 του Ν.4495/2017, με απόφαση του Υπουργού Περιβάλλοντος και Ενέργειας ορίζεται η ημερομηνία έναρξης λειτουργίας του Ηλεκτρονικού Μητρώου. 
-              </p>
-              
-              <p>
-                Μέχρι την ημερομηνία που θα οριστεί με την ανωτέρω απόφαση αναστέλλεται η ισχύς των διατάξεων των άρθρων 52 έως 61 του ανωτέρω νόμου που αφορούν την Ηλεκτρονική Ταυτότητα Κτιρίου.
-              </p>
+              <p>Starting is easy:</p>
+              <ol className="list-decimal pl-6 space-y-2">
+                <li>Create a free account</li>
+                <li>Choose your plan</li>
+                <li>Upload or create your first document</li>
+                <li>Invite team members (optional)</li>
+                <li>Explore our template library</li>
+              </ol>
+              <p>Need help? Visit our <a href="/support" className="text-primary underline">support center</a>.</p>
             </AccordionContent>
           </AccordionItem>
-          
         </Accordion>
       </div>
     </section>
