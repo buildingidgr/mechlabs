@@ -1,10 +1,10 @@
-import { cn } from "@/lib/utils";
 import {
   IconCloud,
   IconCurrencyDollar,
   IconEaseInOut,
   IconTerminal2,
 } from "@tabler/icons-react";
+import { cn } from "@/lib/utils";
 
 export function FeaturesSectionWithHoverEffects() {
   const features = [

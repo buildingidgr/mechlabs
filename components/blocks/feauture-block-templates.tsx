@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
 interface FeatureItem {
   title: string;
@@ -45,7 +45,7 @@ export function FeatureBlockTemplates({
       },
     // Add more default features as needed
   ],
-  competitors = [
+  competitors: _competitors = [
     { name: "Evernote", logo: "/evernote.svg" },
     // Add more default competitors
   ],
