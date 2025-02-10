@@ -1,8 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import { IconChevronDown, IconSearch } from "@tabler/icons-react"
 import { motion, AnimatePresence } from "framer-motion"
+import { IconChevronDown, IconSearch } from "@tabler/icons-react"
 import { cn } from "@/lib/utils"
 
 interface FaqSectionProps {
