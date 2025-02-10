@@ -23,6 +23,7 @@ interface FeatureBlockProps {
   features?: FeatureItem[];
   competitors?: CompetitorItem[];
   screenshotSrc?: string;
+  mobileScreenshotSrc?: string;
 }
 
 export function FeatureBlock({
@@ -49,6 +50,7 @@ export function FeatureBlock({
     // Add more default features as needed
   ],
   screenshotSrc = "/opportunity.png",
+  mobileScreenshotSrc = "/opportunity-mobile.png"
 }: FeatureBlockProps) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -77,6 +79,17 @@ export function FeatureBlock({
               </span>
             </button>
           </article>
+
+          {/* Image Section - Hidden on desktop, shown after title on mobile */}
+          <div className="block md:hidden mb-12">
+            <Image
+              src={mobileScreenshotSrc}
+              alt="Feature preview"
+              width={640}
+              height={1252}
+              className="w-full h-full object-cover"
+            />
+          </div>
 
           <ul className="md:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-2">
             {features.map((feature, index) => (
@@ -111,13 +124,14 @@ export function FeatureBlock({
           </ul>
         </div>
 
-        <div className="mb-24 rounded-3xl overflow-hidden shadow-xl">
+        {/* Desktop Image Section */}
+        <div className="hidden md:block mb-24">
           <Image
             src={screenshotSrc}
             alt="Feature preview"
             width={1252}
             height={640}
-            className="w-full h-auto"
+            className="w-full h-full object-cover"
           />
         </div>
 

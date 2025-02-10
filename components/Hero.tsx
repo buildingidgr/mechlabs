@@ -14,7 +14,7 @@ export default function Hero() {
     <div className="flex flex-col bg-background relative">
       <div className="grid lg:grid-cols-[2fr_1.5fr] gap-2 items-center min-h-[calc(100vh-40rem)] pt-16">
         {/* Left Content */}
-        <div className="px-4 lg:px-12 py-12">
+        <div className="px-4 lg:px-12 py-12 order-2 lg:order-1">
           <div className="space-y-2">
             <div>
               <Badge variant="secondary" className="mb-2">
@@ -38,7 +38,7 @@ export default function Hero() {
         </div>
 
         {/* Right Image */}
-        <div className="relative w-full h-full min-h-[400px] rounded-l-4xl lg:block z-10">
+        <div className="relative w-full h-full min-h-[400px] rounded-l-4xl lg:block z-10 order-1 lg:order-2">
           <div className="absolute inset-0" />
           <Image
             src="/hero-image.png"
