@@ -14,15 +14,13 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <FeaturesSectionWithHoverEffects />
-      <FeatureBlock />
-      <FeatureBlockProjects />
-      <FeatureBlockEditor />
-      <FeatureBlockLibrary />
-      <FeatureBlockTemplates />
-      <FeatureList />
-  
-      <FaqSection />
+      <FeatureBlock id="projects" />
+      <FeatureBlockProjects id="pages" />
+      <FeatureBlockEditor id="knowledge-base" />
+      <FeatureBlockLibrary id="library" />
+      <FeatureBlockTemplates id="templates" />
+      <FeatureList id="features" />
+      <FaqSection id="faq" />
     </main>
   )
 }

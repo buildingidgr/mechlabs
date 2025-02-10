@@ -7,9 +7,13 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion"
 
-export function FaqSection() {
+interface FaqSectionProps {
+  id?: string;
+}
+
+export function FaqSection({ id }: FaqSectionProps) {
   return (
-    <section className="flex justify-center container mx-auto px-4 py-24">
+    <section id={id} className="flex justify-center container mx-auto px-4 py-24">
       <div className="max-w-2xl mx-auto">
         <h2 className="text-3xl font-bold text-primary mb-12">Συχνές Ερωτήσεις</h2>
         

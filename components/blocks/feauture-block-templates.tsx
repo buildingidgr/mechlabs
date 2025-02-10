@@ -13,6 +13,7 @@ interface CompetitorItem {
 }
 
 interface FeatureBlockProps {
+  id?: string;
   heading?: string;
   description?: string;
   linkText?: string;
@@ -23,6 +24,7 @@ interface FeatureBlockProps {
 }
 
 export function FeatureBlockTemplates({
+  id,
   heading = "Έτοιμα πρότυπα για μηχανικούς",
   description = "Επιλέξτε από μια μεγάλη λίστα προτύπων και ολοκληρώστε τα έργα σας πιο γρήγορα και αποδοτικά.",
   linkText = "Join waiting list for private Beta",
@@ -48,7 +50,7 @@ export function FeatureBlockTemplates({
   screenshotSrc = "/templates.png",
 }: FeatureBlockProps) {
   return (
-    <section className="py-12">
+    <section id={id} className="py-12 pt-28">
       <div className="container max-w-7xl mx-auto px-4">
         <div className="grid items-end md:grid-cols-12 gap-24 md:gap-24 mb-8 md:mb-12">
           <article className="md:col-span-5 space-y-3 md:space-y-4">

@@ -6,7 +6,11 @@ import {
 } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 
-export function FeaturesSectionWithHoverEffects() {
+interface FeaturesSectionWithHoverEffectsProps {
+  id?: string;
+}
+
+export function FeaturesSectionWithHoverEffects({ id }: FeaturesSectionWithHoverEffectsProps) {
   const features = [
     {
       title: "Από μηχανικούς για μηχανικούς",
@@ -34,11 +38,11 @@ export function FeaturesSectionWithHoverEffects() {
 
   ];
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10 py-10 max-w-7xl mx-auto">
+    <section id={id} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 relative z-10 py-10 pt-28 max-w-7xl mx-auto">
       {features.map((feature, index) => (
         <Feature key={feature.title} {...feature} index={index} />
       ))}
-    </div>
+    </section>
   );
 }
 

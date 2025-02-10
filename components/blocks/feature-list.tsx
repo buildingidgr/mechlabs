@@ -9,11 +9,13 @@ interface FeatureItem {
 }
 
 interface FeatureListProps {
+  id?: string;
   heading?: string;
   features?: FeatureItem[];
 }
 
 export function FeatureList({
+  id,
   heading = "Όλα τα εργαλεία σε ένα μέρος",
   features = [
     {
@@ -49,7 +51,7 @@ export function FeatureList({
   ]
 }: FeatureListProps) {
   return (
-    <section className="py-12 container max-w-7xl mx-auto px-4">
+    <section id={id} className="py-12 container max-w-7xl mx-auto px-4">
       <header className="mb-16">
         <h2 className="text-7xl font-bold text-foreground mb-2">{heading}</h2>
       </header>
