@@ -45,10 +45,10 @@ export function FeatureBlock({
       },
     // Add more default features as needed
   ],
-  screenshotSrc = "/screenshot-docs.png",
+  screenshotSrc = "/opportunity.png",
 }: FeatureBlockProps) {
   return (
-    <section className="py-32">
+    <section className="py-12">
       <div className="container max-w-7xl mx-auto px-4">
         <div className="grid items-end md:grid-cols-12 gap-24 md:gap-24 mb-8 md:mb-12">
           <article className="md:col-span-5 space-y-3 md:space-y-4">

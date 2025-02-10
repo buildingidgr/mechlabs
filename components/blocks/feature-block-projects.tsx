@@ -48,11 +48,11 @@ export function FeatureBlockProjects({
   screenshotSrc = "/screenshot-projects.png",
 }: FeatureBlockProps) {
   return (
-    <section className="py-32">
+    <section className="py-12">
       <div className="container max-w-7xl mx-auto px-4">
         <div className="grid items-end md:grid-cols-12 gap-24 md:gap-24 mb-8 md:mb-12">
           <article className="md:col-span-5 space-y-3 md:space-y-4">
-            <h3 className="text-2xl md:text-6xl font-bold text-primary tracking-tight">
+            <h3 className="text-2xl md:text-6xl font-bold text-foreground tracking-tight">
               {heading}
             </h3>
             <p className="text-sm md:text-base font-medium leading-4.5 md:leading-5 text-muted-foreground antialiased" style={{

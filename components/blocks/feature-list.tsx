@@ -49,9 +49,9 @@ export function FeatureList({
   ]
 }: FeatureListProps) {
   return (
-    <section className="py-24 container max-w-7xl mx-auto px-4">
+    <section className="py-12 container max-w-7xl mx-auto px-4">
       <header className="mb-16">
-        <h2 className="text-4xl font-bold text-primary mb-4">{heading}</h2>
+        <h2 className="text-4xl font-bold text-foreground mb-4">{heading}</h2>
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

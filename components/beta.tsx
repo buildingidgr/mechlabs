@@ -33,7 +33,7 @@ export function HeroPillSecond() {
     <>
       <HeroPill 
         href="#"
-        label="Register with your email →"
+        label="Join now!"
         announcement="📣 Waiting list for private Beta opened"
         isExternal={false}
         onClick={() => setIsOpen(true)}
