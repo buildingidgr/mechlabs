@@ -30,7 +30,7 @@ export function HeroPill({
       }}
       className={cn(
         "flex w-auto items-center justify-center space-x-2 mb-2",
-        "bg-primary ring-1 ring-accent",
+        "bg-foreground ring-1 ring-accent",
         "px-2 py-2 whitespace-pre",
         className
       )}
@@ -40,12 +40,12 @@ export function HeroPill({
     >
       <div className={cn(
         "w-fit rounded-sm bg-accent px-2 py-1",
-        "text-xs font-medium text-primary sm:text-sm",
+        "text-xs font-medium text-foreground sm:text-sm",
         "text-center"
       )}>
         {announcement}
       </div>
-      <p className="text-xs font-medium text-primary text-accent sm:text-sm">
+      <p className="text-xs font-semibold text-background text-accent sm:text-sm">
         {label}
       </p>
       <svg

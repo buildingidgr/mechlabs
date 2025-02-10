@@ -16,7 +16,7 @@ import { Input } from "@/components/ui/input";
 export function HeroPillFirst() {
   return (
     <HeroPill 
-      href="https://badget.tech/blog/introducing-Badget-ai"
+      href=""
       label="Mechlabs public beta has opened waiting list"
       announcement="📣 Announcement"
       isExternal
@@ -33,8 +33,8 @@ export function HeroPillSecond() {
     <>
       <HeroPill 
         href="#"
-        label="Register with your email"
-        announcement="🛠️ Beta waiting list opened"
+        label="Register with your email →"
+        announcement="📣 Waiting list for Beta opened"
         isExternal={false}
         onClick={() => setIsOpen(true)}
         className="cursor-pointer"
