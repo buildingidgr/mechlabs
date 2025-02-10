@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { IconChevronDown } from "@tabler/icons-react"
+import { IconChevronDown, IconSearch } from "@tabler/icons-react"
 import { cn } from "@/lib/utils"
 
 interface FaqSectionProps {
@@ -19,6 +19,9 @@ interface FaqGroup {
 }
 
 export function FaqSection({ id }: FaqSectionProps) {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [activeGroup, setActiveGroup] = useState<number | null>(null);
+
   const faqGroups: FaqGroup[] = [
     {
       title: "Επαγγελματικές Ευκαιρίες",
@@ -235,6 +238,15 @@ export function FaqSection({ id }: FaqSectionProps) {
     }
   ];
 
+  // Filter FAQs based on search query
+  const filteredGroups = faqGroups.map(group => ({
+    ...group,
+    items: group.items.filter(item =>
+      item.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.answer[0].toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  })).filter(group => group.items.length > 0);
+
   return (
     <section id={id} className="relative z-10 py-24 scroll-mt-32">
       <div className="max-w-5xl mx-auto px-4">
@@ -245,24 +257,75 @@ export function FaqSection({ id }: FaqSectionProps) {
           <p className="mt-4 text-lg text-neutral-600 dark:text-neutral-400">
             Βρείτε απαντήσεις στις πιο συχνές ερωτήσεις για την πλατφόρμα μας
           </p>
+          
+          {/* Search Bar */}
+          <div className="mt-8 max-w-2xl mx-auto">
+            <div className="relative">
+              <IconSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-neutral-400" />
+              <input
+                type="text"
+                placeholder="Αναζήτηση στις συχνές ερωτήσεις..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-3 rounded-xl border border-neutral-200 dark:border-neutral-800 
+                          bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100
+                          focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all"
+              />
+            </div>
+          </div>
         </div>
 
-        <div className="space-y-16">
-          {faqGroups.map((group, groupIndex) => (
-            <div key={groupIndex} className="space-y-6">
-              <div className="space-y-2">
-                <h3 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">
-                  {group.title}
-                </h3>
-                <p className="text-neutral-600 dark:text-neutral-400">
-                  {group.description}
-                </p>
-              </div>
-              <div className="grid gap-4">
-                {group.items.map((faq, index) => (
-                  <FaqItem key={index} faq={faq} index={index} />
-                ))}
-              </div>
+        <div className="space-y-8">
+          {filteredGroups.map((group, groupIndex) => (
+            <div 
+              key={groupIndex} 
+              className={cn(
+                "rounded-2xl border border-neutral-200 dark:border-neutral-800",
+                "bg-white dark:bg-neutral-900 overflow-hidden",
+                "transition-all duration-200",
+                activeGroup === groupIndex ? "ring-2 ring-blue-500/50" : ""
+              )}
+            >
+              {/* Group Header */}
+              <button
+                onClick={() => setActiveGroup(activeGroup === groupIndex ? null : groupIndex)}
+                className="w-full px-8 py-6 flex items-center justify-between hover:bg-neutral-50 dark:hover:bg-neutral-800/50 transition-colors"
+              >
+                <div className="text-left">
+                  <h3 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">
+                    {group.title}
+                  </h3>
+                  <p className="mt-1 text-neutral-600 dark:text-neutral-400">
+                    {group.description}
+                  </p>
+                </div>
+                <IconChevronDown
+                  className={cn(
+                    "w-6 h-6 text-neutral-400 transition-transform duration-200",
+                    activeGroup === groupIndex && "transform rotate-180"
+                  )}
+                />
+              </button>
+
+              {/* Group Content */}
+              <AnimatePresence>
+                {activeGroup === groupIndex && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <div className="px-8 pb-6 border-t border-neutral-200 dark:border-neutral-800">
+                      <div className="divide-y divide-neutral-200 dark:divide-neutral-800">
+                        {group.items.map((faq, index) => (
+                          <FaqItem key={index} faq={faq} index={index} />
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           ))}
         </div>
@@ -283,25 +346,17 @@ function FaqItem({ faq, index }: FaqItemProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div
-      className={cn(
-        "rounded-xl border border-neutral-200 dark:border-neutral-800",
-        "bg-white dark:bg-neutral-900",
-        "transition-all duration-200",
-        "hover:border-blue-500/50 dark:hover:border-blue-500/50",
-        "group/faq"
-      )}
-    >
+    <div className="py-4 first:pt-6 last:pb-0">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full px-6 py-5 flex items-center justify-between"
+        className="w-full flex items-start justify-between gap-4 group/faq"
       >
-        <h3 className="text-xl font-semibold text-left text-neutral-900 dark:text-neutral-100 group-hover/faq:text-blue-500">
+        <h4 className="text-lg font-medium text-left text-neutral-900 dark:text-neutral-100 group-hover/faq:text-blue-500">
           {faq.question}
-        </h3>
+        </h4>
         <IconChevronDown
           className={cn(
-            "w-5 h-5 text-neutral-500 transition-transform duration-200",
+            "w-5 h-5 flex-shrink-0 text-neutral-400 transition-transform duration-200 mt-1",
             isOpen && "transform rotate-180",
             "group-hover/faq:text-blue-500"
           )}
@@ -317,20 +372,20 @@ function FaqItem({ faq, index }: FaqItemProps) {
             transition={{ duration: 0.2 }}
             className="overflow-hidden"
           >
-            <div className="px-6 pb-5 text-neutral-600 dark:text-neutral-300">
-              {faq.answer[0] && (
-                <div className="mb-3 whitespace-pre-wrap">
-                  {faq.answer[0]}
-                </div>
+            <div className="mt-4 text-neutral-600 dark:text-neutral-300 prose dark:prose-invert max-w-none">
+              <div className="whitespace-pre-wrap text-base leading-relaxed">
+                {faq.answer[0]}
+              </div>
+              {faq.answer[1].length > 0 && (
+                <ul className="mt-4 space-y-2">
+                  {faq.answer[1].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               )}
-              <ul className="space-y-2">
-                {faq.answer[1].map((item, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
           </motion.div>
         )}
