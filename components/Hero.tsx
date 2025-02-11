@@ -11,7 +11,7 @@ export default function Hero() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex flex-col bg-background relative">
+    <div className="flex flex-col bg-background relative pb-40">
       <div className="grid lg:grid-cols-[2fr_1.5fr] gap-2 items-center">
         {/* Left Content */}
         <div className="px-4 lg:px-12 py-2 lg:py-2 order-2 lg:order-1">

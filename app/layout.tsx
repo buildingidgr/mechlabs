@@ -39,7 +39,7 @@ export default function RootLayout({
           <Navbar />
         </div>
 
-        <main className="items-center justify-center max-w-7xl mx-auto px-4 pt-8">
+        <main className="items-center justify-center max-w-7xl mx-auto px-4 pt-40">
           {children}
         </main>
 
