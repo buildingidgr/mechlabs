@@ -64,7 +64,7 @@ export function Navbar() {
       icon: '/icons/folder.svg'
     },
     {
-      id: 'pages',
+      id: 'editor',
       title: 'Έγγραφα',
       description: 'Δημιούργησε και επεξεργάσου έγγραφα',
       icon: '/icons/file.svg'
