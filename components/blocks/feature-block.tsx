@@ -11,11 +11,6 @@ interface FeatureItem {
   icon: string;
 }
 
-interface CompetitorItem {
-  name: string;
-  logo: string;
-}
-
 interface FeatureBlockProps {
   id?: string;
   heading: string;
