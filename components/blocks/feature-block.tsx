@@ -95,7 +95,7 @@ export function FeatureBlock({
                   <h4 className="text-base md:text-lg font-semibold tracking-tight text-foreground">
                     {feature.title}
                   </h4>
-                  <p className="text-left text-sm md:text-base font-semibold leading-4 md:leading-5 text-muted-foreground font-medium" style={{
+                  <p className="text-left text-base md:text-base font-semibold leading-4 md:leading-5 text-muted-foreground font-medium" style={{
                     fontVariationSettings: '"wght" 500',
                     letterSpacing: '-0.03px',
                     WebkitFontSmoothing: 'antialiased'
