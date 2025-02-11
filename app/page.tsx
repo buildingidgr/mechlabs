@@ -97,7 +97,7 @@ export default function Home() {
             icon: "/Share Square.svg",
           },
           {
-            title: "Έξυπνη Αναζήτηση",
+            title: "Έξυπνη αναζήτηση",
             description: "Βρες ακριβώς αυτό που ψάχνεις με contextual search που καταλαβαίνει τι θέλεις",
             icon: "/File Search.svg",
           },
