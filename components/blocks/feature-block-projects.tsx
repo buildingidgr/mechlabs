@@ -27,22 +27,22 @@ interface FeatureBlockProps {
 
 export function FeatureBlockProjects({
   heading = "Βάλε σε τάξη τα έργα σου",
-  description = "Δημιούργησε έργα, οργάνωσε εργασίες, δες την πρόοδο και συγκέντρωσε όλα σου τα αρχεία εύκολα!",
+  description = "Έχεις βαρεθεί το χάος; Ήρθε η ώρα να οργανωθείς με στυλ! 🚀\nΦαντάσου να έχεις όλα σου τα project σε ένα μέρος - εύκολα, γρήγορα και... αποτελεσματικά!",
   linkText = "Join waiting list for private Beta",
   features = [
     {
       title: "Όλα σε ένα μέρος",
-      description: "Δες τα tasks σου σε Kanban προβολή, οργάνωσε λίστες και επισύναψε αρχεία χωρίς κόπο",
+      description: "Όλα τα tasks σου σε μια ματιά με super cool Kanban boards",
       icon: "/template.svg",
     },
     {
-        title: "Kanban, λίστες & αρχεία",
-        description: "Δες τα tasks σου σε Kanban προβολή, οργάνωσε λίστες και επισύναψε αρχεία χωρίς κόπο",
+        title: "Lίστες & αρχεία",
+        description: "Files και λίστες που οργανώνονται... μόνα τους (σχεδόν! 😉)",
         icon: "/fast.svg",
       },
       {
         title: "Μείνε μπροστά",
-        description: "Παρακολούθησε την πρόοδο, βρες ό,τι χρειάζεσαι γρήγορα και ολοκλήρωσε τα έργα σου πιο αποδοτικά!",
+        description: "Progress tracking που θα σε κάνει να νιώθεις σαν boss",
         icon: "/time.svg",
       },
     // Add more default features as needed
@@ -60,7 +60,7 @@ export function FeatureBlockProjects({
             <h3 className="text-5xl md:text-6xl font-bold text-foreground tracking-tight">
               {heading}
             </h3>
-            <p className="text-sm md:text-base font-medium leading-4.5 md:leading-5 text-muted-foreground antialiased" style={{
+            <p className="text-xl font-medium leading-tighter text-muted-foreground" style={{
               fontVariationSettings: '"wght" 529',
               letterSpacing: '-0.12px',
               WebkitFontSmoothing: 'antialiased'
