@@ -1,10 +1,9 @@
-import '@/app/globals.css';
-import { Inter } from 'next/font/google';
-import { CookieConsentBanner } from '@/components/CookieConsentBanner';
-import { Navbar } from '@/components/Navbar';
-import { Footer } from '@/components/Footer';
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import '@/app/globals.css';
+import { Navbar } from '@/components/Navbar';
+import { Footer } from '@/components/Footer';
+import { CookieConsentBanner } from '@/components/CookieConsentBanner';
 import { HeroPillSecond } from "@/components/beta";
 
 const geistSans = localFont({
