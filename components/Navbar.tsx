@@ -103,7 +103,7 @@ export function Navbar() {
             alt="Mechlabs Logo"
             width={20}
             height={20}
-            className="h-8 w-auto"
+            className="h-6 w-auto"
           />
         </Link>
         <div className="flex-grow pt-2">
