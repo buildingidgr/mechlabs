@@ -2,10 +2,10 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { BetaDialog } from "./beta"
-import { FeaturesSectionWithHoverEffects } from "./blocks/feature-section-with-hover-effects"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { BetaDialog } from "./beta"
+import { FeaturesSectionWithHoverEffects } from "./blocks/feature-section-with-hover-effects"
 
 export default function Hero() {
   const [isOpen, setIsOpen] = useState(false);

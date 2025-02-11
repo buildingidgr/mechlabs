@@ -40,7 +40,7 @@ function smoothScrollTo(targetPosition: number, duration: number) {
 export function Navbar() {
   const [value, setValue] = React.useState("")
 
-  const icons: Record<string, string> = {
+  const _icons: Record<string, string> = {
     opportunities: '/icons/briefcase.svg',
     projects: '/icons/folder.svg',
     pages: '/icons/file.svg',

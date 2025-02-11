@@ -6,7 +6,7 @@ import Link from 'next/link'
 export function CookieConsentBanner() {
   const [isVisible, setIsVisible] = useState(false)
   const [showDetails, setShowDetails] = useState(false)
-  const [necessary, setNecessary] = useState(true)
+  const [_necessary, _setNecessary] = useState(true)
   const [preference, setPreference] = useState(true)
   const [analytics, setAnalytics] = useState(false)
   const [marketing, setMarketing] = useState(false)
@@ -173,7 +173,7 @@ export function CookieConsentBanner() {
                     }}>
                       <button 
                         style={{
-                          background: necessary ? '#2d2d2d' : '#ddd',
+                          background: _necessary ? '#2d2d2d' : '#ddd',
                           width: 40,
                           height: 24,
                           borderRadius: 12,
@@ -188,7 +188,7 @@ export function CookieConsentBanner() {
                           width: 20,
                           height: 20,
                           borderRadius: '50%',
-                          transform: `translateX(${necessary ? 16 : 2}px)`,
+                          transform: `translateX(${_necessary ? 16 : 2}px)`,
                           transition: 'all 0.2s ease'
                         }} />
                       </button>
