@@ -53,44 +53,44 @@ export function Navbar() {
   const menuItems = [
     { 
       id: 'opportunities',
-      title: 'Opportunities',
-      description: 'Available projects & collaborations',
+      title: 'Ευκαιρίες',
+      description: 'Ανακάλυψε νέα έργα στην περιοχή σου',
       icon: '/icons/briefcase.svg'
     },
     {
       id: 'projects',
-      title: 'Projects',
-      description: 'Your active engagements',
+      title: 'Έργα',
+      description: 'Οργάνωσε και παρακολούθησε τα έργα σου',
       icon: '/icons/folder.svg'
     },
     {
       id: 'pages',
-      title: 'Pages',
-      description: 'Documentation & guides',
+      title: 'Έγγραφα',
+      description: 'Δημιούργησε και επεξεργάσου έγγραφα',
       icon: '/icons/file.svg'
     },
     {
       id: 'knowledge-base',
-      title: 'Knowledge Base',
-      description: 'Technical resources & FAQs',
+      title: 'Βιβλιοθήκη',
+      description: 'Νομοθεσία, διαδικασίες και συμβουλές',
       icon: '/icons/book.svg'
     },
     {
       id: 'templates',
-      title: 'Templates',
-      description: 'Project blueprints',
+      title: 'Πρότυπα',
+      description: 'Έτοιμα πρότυπα για κάθε περίπτωση',
       icon: '/icons/layout.svg'
     },
     {
       id: 'features',
-      title: 'Features',
-      description: 'Platform capabilities',
+      title: 'Δυνατότητες',
+      description: 'Όλα τα εργαλεία σε μία πλατφόρμα',
       icon: '/icons/sparkles.svg'
     },
     {
       id: 'faq',
-      title: 'FAQ',
-      description: 'Common questions',
+      title: 'Συχνές Ερωτήσεις',
+      description: 'Βρες γρήγορα απαντήσεις',
       icon: '/icons/help-circle.svg'
     }
   ];
@@ -116,7 +116,7 @@ export function Navbar() {
               >
                 Product
               </NavigationMenuTrigger>
-              <NavigationMenuContent className="p-1 w-auto min-w-[280px]">
+              <NavigationMenuContent className="p-1 w-auto min-w-[320px]">
                 <div className="grid gap-0.5">
                   {menuItems.map((item) => (
                     <Link 

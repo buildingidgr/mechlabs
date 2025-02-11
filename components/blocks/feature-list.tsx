@@ -22,41 +22,41 @@ export function FeatureList({
   heading = "Όλα τα εργαλεία που χρειάζεσαι",
   features = [
     {
-    title: "Ευκαιρίες",
-    description: "Βρες νέα έργα στην περιοχή σου",
-    href: "/templates",
-    iconSrc: "/briefcase.svg"
+      title: "Ευκαιρίες",
+      description: "Ανακάλυψε νέα έργα στην περιοχή σου με ζωντανές ενημερώσεις",
+      href: "/templates",
+      iconSrc: "/briefcase.svg"
   },
-    {
+  {
       title: "Έγγραφα",
-      description: "Δημιούργησε οποιοδήποτε έγγραφο, επικοινώνησε οποιαδήποτε ιδέα",
+      description: "Δημιούργησε επαγγελματικά έγγραφα με AI υποστήριξη και έξυπνα εργαλεία",
       href: "/docs",
       iconSrc: "/documents.svg"
-    },
-    {
+  },
+  {
       title: "Βιβλιοθήκη",
-      description: "Κεντρικό σημείο για όλη σου την τεχνική γνώση",
+      description: "Όλη η τεχνική γνώση στα χέρια σου - νομοθεσία, διαδικασίες και συμβουλές",
       href: "/library",
       iconSrc: "/library.svg"
-    },
-    {
+  },
+  {
       title: "Έργα",
-      description: "Παρακολούθησε τα έργα σου από αρχή ως τέλος",
+      description: "Οργάνωσε και παρακολούθησε τα έργα σου με Kanban boards και αυτοματισμούς",
       href: "/projects",
       iconSrc: "/projects.svg"
-    },
-    {
+  },
+  {
       title: "Mechlabs AI",
-      description: "Βρίσκει και κάνει αυτό που ζητάς",
+      description: "Ο έξυπνος βοηθός σου που προσαρμόζεται στις ανάγκες του έργου σου",
       href: "/ai",
       iconSrc: "/code1.svg"
-    },
-    {
+  },
+  {
       title: "Πρότυπα",
-      description: "Έτοιμα πρότυπα για να ξεκινήσεις αμέσως",
+      description: "Επαγγελματικά πρότυπα για κάθε περίπτωση, έτοιμα για άμεση χρήση",
       href: "/templates",
       iconSrc: "/templates.svg"
-    }
+  }
     
   ]
 }: FeatureListProps) {
