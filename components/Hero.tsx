@@ -12,10 +12,10 @@ export default function Hero() {
 
   return (
     <div className="flex flex-col bg-background relative">
-      <div className="grid lg:grid-cols-[2fr_1.5fr] gap-2 items-center min-h-[calc(100vh-40rem)] pt-8 lg:pt-16">
+      <div className="grid lg:grid-cols-[2fr_1.5fr] gap-2 items-center">
         {/* Left Content */}
-        <div className="px-4 lg:px-12 py-6 lg:py-12 order-2 lg:order-1">
-          <div className="space-y-2 lg:space-y-8">
+        <div className="px-4 lg:px-12 py-2 lg:py-2 order-2 lg:order-1">
+          <div className="space-y-2 lg:space-y-4">
             <div>
               <Badge variant="secondary" className="mb-1 lg:mb-2">
                 Private Beta coming soon...
@@ -51,7 +51,7 @@ export default function Hero() {
       </div>
       
       {/* Features Section */}
-      <div className="mt-6 lg:mt-12 scroll-mt-32" id="opportunities">
+      <div className="mt-2 lg:mt-2 scroll-mt-32">
         <FeaturesSectionWithHoverEffects />
       </div>
 

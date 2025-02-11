@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import { HeroPillSecond } from "@/components/beta";
 import { Footer } from "@/components/Footer";
 import "./globals.css";
+import { CookieConsentBanner } from '@/components/CookieConsentBanner'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -38,11 +39,12 @@ export default function RootLayout({
           <Navbar />
         </div>
 
-        <main className="items-center justify-center max-w-7xl mx-auto px-4 pt-16">
+        <main className="items-center justify-center max-w-7xl mx-auto px-4 pt-8">
           {children}
         </main>
 
         <Footer />
+        <CookieConsentBanner />
       </body>
     </html>
   );

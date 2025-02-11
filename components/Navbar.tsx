@@ -40,6 +40,61 @@ function smoothScrollTo(targetPosition: number, duration: number) {
 export function Navbar() {
   const [value, setValue] = React.useState("")
 
+  const icons: Record<string, string> = {
+    opportunities: '/icons/briefcase.svg',
+    projects: '/icons/folder.svg',
+    pages: '/icons/file.svg',
+    'knowledge-base': '/icons/book.svg',
+    templates: '/icons/layout.svg',
+    features: '/icons/sparkles.svg',
+    faq: '/icons/help-circle.svg'
+  };
+
+  const menuItems = [
+    { 
+      id: 'opportunities',
+      title: 'Opportunities',
+      description: 'Available projects & collaborations',
+      icon: '/icons/briefcase.svg'
+    },
+    {
+      id: 'projects',
+      title: 'Projects',
+      description: 'Your active engagements',
+      icon: '/icons/folder.svg'
+    },
+    {
+      id: 'pages',
+      title: 'Pages',
+      description: 'Documentation & guides',
+      icon: '/icons/file.svg'
+    },
+    {
+      id: 'knowledge-base',
+      title: 'Knowledge Base',
+      description: 'Technical resources & FAQs',
+      icon: '/icons/book.svg'
+    },
+    {
+      id: 'templates',
+      title: 'Templates',
+      description: 'Project blueprints',
+      icon: '/icons/layout.svg'
+    },
+    {
+      id: 'features',
+      title: 'Features',
+      description: 'Platform capabilities',
+      icon: '/icons/sparkles.svg'
+    },
+    {
+      id: 'faq',
+      title: 'FAQ',
+      description: 'Common questions',
+      icon: '/icons/help-circle.svg'
+    }
+  ];
+
   return (
     <div className="sticky top-11 z-50 w-full border-b bg-background h-16 flex flex-row items-center pl-4">
         <Link href="/">
@@ -61,17 +116,17 @@ export function Navbar() {
               >
                 Product
               </NavigationMenuTrigger>
-              <NavigationMenuContent className="w-[200px] p-1">
+              <NavigationMenuContent className="p-1 w-auto min-w-[280px]">
                 <div className="grid gap-0.5">
-                  {['opportunities', 'projects', 'pages', 'knowledge-base', 'templates', 'features', 'faq'].map((section) => (
+                  {menuItems.map((item) => (
                     <Link 
-                      key={section}
-                      href={`#${section}`}
+                      key={item.id}
+                      href={`#${item.id}`}
                       legacyBehavior
                       passHref
                       onClick={(e) => {
                         e.preventDefault()
-                        const target = document.getElementById(section)
+                        const target = document.getElementById(item.id)
                         if (target) {
                           const headerOffset = 120
                           const elementPosition = target.getBoundingClientRect().top
@@ -82,8 +137,20 @@ export function Navbar() {
                         }
                       }}
                     >
-                      <NavigationMenuLink className="flex px-2 py-1.5 text-sm rounded-md hover:bg-accent hover:text-accent-foreground focus:bg-transparent active:bg-transparent transition-colors whitespace-nowrap group-data-[active]:bg-transparent">
-                        {section.split('-').map(word => word[0].toUpperCase() + word.slice(1)).join(' ')}
+                      <NavigationMenuLink className="flex items-center px-2 py-1.5 text-sm rounded-md hover:bg-accent hover:text-accent-foreground focus:bg-transparent active:bg-transparent transition-colors group-data-[active]:bg-transparent min-h-[40px]">
+                        <Image 
+                          src={item.icon}
+                          alt=""
+                          width={28}
+                          height={28}
+                          className="mr-3 h-7 w-7"
+                        />
+                        <div className="flex-1 leading-tight">
+                          <div className="text-sm font-semibold">{item.title}</div>
+                          <div className="text-xs text-muted-foreground mt-0">
+                            {item.description}
+                          </div>
+                        </div>
                       </NavigationMenuLink>
                     </Link>
                   ))}
@@ -91,14 +158,14 @@ export function Navbar() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/components" legacyBehavior passHref>
+              <Link href="/about" legacyBehavior passHref>
                 <NavigationMenuLink className="px-4 py-2 text-base font-medium hover:bg-accent hover:text-accent-foreground rounded-md">
                   About
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/docs" legacyBehavior passHref>
+              <Link href="/privacy-terms" legacyBehavior passHref>
                 <NavigationMenuLink className="px-4 py-2 text-base font-medium hover:bg-accent hover:text-accent-foreground rounded-md">
                   Terms
                 </NavigationMenuLink>

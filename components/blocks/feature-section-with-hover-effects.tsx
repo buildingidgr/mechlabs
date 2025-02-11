@@ -52,13 +52,13 @@ const Feature = ({
         index < 4 && "lg:border-b dark:border-foreground"
       )}
     >
-      <div className="text-lg font-bold mb-2 px-8">
+      <div className="text-2xl text-foreground font-bold mb-4 px-8 tracking-tighter leading-tighter">
         <div className="absolute left-0 inset-y-0 h-12 w-1 rounded-tr-full rounded-br-full bg-foreground" />
         <span className="text-foreground">
           {title}
         </span>
       </div>
-      <p className="text-base text-muted-foreground font-semibold px-8">
+      <p className="text-xl text-muted-foreground font-semibold px-8  leading-tighter">
         {description}
       </p>
     </div>
