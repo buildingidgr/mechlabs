@@ -52,7 +52,7 @@ export function FeatureBlock({
             {linkText && (
               <button
                 onClick={() => setIsOpen(true)}
-                className="inline-flex items-center text-primary hover:text-primary/90 transition-colors group font-medium text-sm"
+                className="inline-flex items-center text-primary hover:text-primary/90 transition-colors group font-medium text-xl"
               >
                 <span>{linkText}</span>
                 <span className="ml-2 group-hover:translate-x-1 transition-transform">
