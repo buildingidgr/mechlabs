@@ -28,7 +28,7 @@ interface FeatureBlockProps {
 export function FeatureBlockLibrary({
   id,
   heading = "Ό,τι χρειάζεσαι, σε ένα μέρος",
-  description = "Διαδικασίες, νόμοι, best practices και use cases – όλα συγκεντρωμένα για τους μηχανικούς!",
+  description = "Βαρέθηκες να χάνεσαι σε ατελείωτα PDF και outdated sites; Έχουμε τη λύση! 🎯 Μια πλατφόρμα με όλη τη γνώση που χρειάζεσαι - από νομοθεσία μέχρι pro tips!",
   linkText = "Join waiting list for private Beta",
   features = [
     {
