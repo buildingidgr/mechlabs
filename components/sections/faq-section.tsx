@@ -251,7 +251,7 @@ export function FaqSection({ id }: FaqSectionProps) {
     <section id={id} className="relative z-10 py-24 scroll-mt-32">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-left mb-16">
-          <h2 className="text-4xl font-bold flex">
+          <h2 className="text-5xl md:text-6xl font-bold flex">
             Συχνές Ερωτήσεις
           </h2>
           <p className="w-full mt-4 text-lg">

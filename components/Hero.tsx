@@ -12,24 +12,24 @@ export default function Hero() {
 
   return (
     <div className="flex flex-col bg-background relative">
-      <div className="grid lg:grid-cols-[2fr_1.5fr] gap-2 items-center min-h-[calc(100vh-40rem)] pt-16">
+      <div className="grid lg:grid-cols-[2fr_1.5fr] gap-2 items-center min-h-[calc(100vh-40rem)] pt-8 lg:pt-16">
         {/* Left Content */}
-        <div className="px-4 lg:px-12 py-12 order-2 lg:order-1">
-          <div className="space-y-2">
+        <div className="px-4 lg:px-12 py-6 lg:py-12 order-2 lg:order-1">
+          <div className="space-y-2 lg:space-y-8">
             <div>
-              <Badge variant="secondary" className="mb-2">
+              <Badge variant="secondary" className="mb-1 lg:mb-2">
                 Private Beta coming soon...
               </Badge>
-              <h1 className="text-4xl lg:text-7xl font-bold text-foreground leading-tight">
+              <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight leading-tighter">
               Η πλατφόρμα των μηχανικών
               </h1>
             </div>
             
-            <p className="lg:text-xl text-base text-gray-600 max-w-xl">
-            Αποκτήστε νέους πελάτες και διαχειριστείτε τα έργα σας με ασφάλεια και επαγγελματισμό
+            <p className="lg:text-3xl text-3xl font-semibold text-gray-600 max-w-xl">
+            Η επόμενη γενιά λογισμικού για μηχανικούς είναι εδώ
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 pt-2 lg:pt-4">
               <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={() => setIsOpen(true)}>
                  Join waiting list for private Beta
               </Button>
@@ -51,7 +51,7 @@ export default function Hero() {
       </div>
       
       {/* Features Section */}
-      <div className="mt-12 scroll-mt-32" id="opportunities">
+      <div className="mt-6 lg:mt-12 scroll-mt-32" id="opportunities">
         <FeaturesSectionWithHoverEffects />
       </div>
 

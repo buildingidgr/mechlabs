@@ -29,22 +29,22 @@ interface FeatureBlockProps {
 export function FeatureBlock({
   id,
   heading = "Ευκαιρίες έργων παντού",
-  description = "Ανακαλύψτε διαθέσιμες ευκαιρίες κοντά σας, όπου κι αν δραστηριοποιείστε, με έξυπνη χαρτογραφημένη προβολή έργων σε όλη τη χώρα.",
+  description = "Ανακάλυψε διαθέσιμες ευκαιρίες στην περιοχή σου. Όπου κι αν δραστηριοποιείσαι, δες όλα τα διαθέσιμα έργα σε πραγματικό χρόνο",
   linkText = "Join waiting list for private Beta",
   features = [
     {
       title: "Εύρεση ευκαιριών",
-      description: "Βρείτε διαθέσιμα έργα κοντά σας με χαρτογράφηση",
+      description: "Βρες διαθέσιμα έργα κοντά σου με χάρτη",
       icon: "/pin.svg",
     },
     {
-        title: "Εξειδικευμένη αναζήτηση",
-        description: "Φιλτράρετε αναλογα με την ειδικότητά σας",
+        title: "Έξυπνη αναζήτηση",
+        description: "Φιλτράρε με την ειδικότητά σου",
         icon: "/door.svg",
       },
       {
         title: "Γρήγορη πρόσβαση",
-        description: "Ενημερωθείτε άμεσα και κινηθείτε πρώτοι!",
+        description: "Ενημερώσου άμεσα και κινήσου πρώτος!",
         icon: "/chat.svg",
       },
     // Add more default features as needed
@@ -55,14 +55,14 @@ export function FeatureBlock({
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section id={id} className="py-12 scroll-mt-32 mt-16">
+    <section id={id} className="py-6 lg:py-12 scroll-mt-32 mt-8 lg:mt-16">
       <div className="container max-w-7xl mx-auto px-4">
-        <div className="grid items-end md:grid-cols-12 gap-24 md:gap-24 mb-8 md:mb-12">
-          <article className="md:col-span-5 space-y-3 md:space-y-4">
-            <h3 className="text-2xl md:text-6xl font-bold text-foreground tracking-tight">
+        <div className="grid items-end md:grid-cols-12 gap-12 lg:gap-24 mb-4 md:mb-12">
+          <article className="md:col-span-5 space-y-2 md:space-y-4">
+            <h3 className="text-5xl md:text-6xl font-bold text-foreground tracking-tight">
               {heading}
             </h3>
-            <p className="text-sm md:text-base font-medium leading-4.5 md:leading-5 text-muted-foreground antialiased" style={{
+            <p className="text-xl font-medium leading-tighter text-muted-foreground" style={{
               fontVariationSettings: '"wght" 529',
               letterSpacing: '-0.12px',
               WebkitFontSmoothing: 'antialiased'
@@ -71,7 +71,7 @@ export function FeatureBlock({
             </p>
             <button
               onClick={() => setIsOpen(true)}
-              className="inline-flex items-center text-primary hover:text-primary/80 transition-colors group font-medium text-sm"
+              className="inline-flex items-center text-primary hover:text-primary/80 transition-colors group font-medium text-base"
             >
               <span>{linkText}</span>
               <span className="ml-2 group-hover:translate-x-1 transition-transform">
@@ -81,7 +81,7 @@ export function FeatureBlock({
           </article>
 
           {/* Image Section - Hidden on desktop, shown after title on mobile */}
-          <div className="block md:hidden mb-12">
+          <div className="block md:hidden mb-6 lg:mb-12">
             <Image
               src={mobileScreenshotSrc}
               alt="Feature preview"
@@ -91,14 +91,14 @@ export function FeatureBlock({
             />
           </div>
 
-          <ul className="md:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-2">
+          <ul className="md:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-1 md:gap-2">
             {features.map((feature, index) => (
               <li
                 key={index}
                 className="p-1 md:p-1 rounded-lg md:rounded-xl bg-background hover:bg-accent/10 transition-colors"
                 style={{ height: 'fit-content' }}
               >
-                <div className="mb-1 md:mb-1 w-20 h-20 md:w-20 md:h-20 rounded-xl flex items-start justify-start aspect-square">
+                <div className="mb-1 md:mb-1 w-16 h-16 md:w-20 md:h-20 rounded-xl flex items-start justify-start aspect-square">
                   <Image
                     src={feature.icon}
                     alt=""
@@ -107,11 +107,11 @@ export function FeatureBlock({
                     className="text-primary md:group-hover:scale-110 w-full h-full object-contain p-1.5"
                   />
                 </div>
-                <span className="space-y-2">
+                <span className="space-y-1 md:space-y-2">
                   <h4 className="text-base md:text-lg font-semibold tracking-tight text-foreground">
                     {feature.title}
                   </h4>
-                  <p className=" text-left text-sm md:text-base font-semibold leading-4 md:leading-5 text-muted-foreground font-medium" style={{
+                  <p className="text-base md:text-base font-medium leading-5 md:leading-5 text-muted-foreground" style={{
                     fontVariationSettings: '"wght" 500',
                     letterSpacing: '-0.03px',
                     WebkitFontSmoothing: 'antialiased'

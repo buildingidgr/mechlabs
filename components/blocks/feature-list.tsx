@@ -65,7 +65,7 @@ export function FeatureList({
   return (
     <section id={id} className="py-12 container max-w-7xl mx-auto px-4 scroll-mt-32">
       <header className="mb-20 max-w-[50%]">
-        <h2 className="text-7xl font-bold text-foreground mb-16">{heading}</h2>
+        <h2 className="text-5xl md:text-7xl font-bold text-foreground mb-16">{heading}</h2>
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
