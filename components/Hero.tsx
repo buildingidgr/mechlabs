@@ -5,13 +5,14 @@ import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { BetaDialog } from "./beta"
+import { LogoWall } from "@/components/ui/logo-wall"
 
 export default function Hero() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex flex-col bg-background relative px-4">
-      <div className="grid lg:grid-cols-[2fr_1.5fr] gap-2 items-center">
+    <div className="flex flex-col bg-background relative px-4 pb-16">
+      <div className="grid lg:grid-cols-[1.2fr_1.5fr] gap-0 items-center">
         {/* Left Content */}
         <div className="py-2 lg:py-2 order-1 lg:order-1">
           <div className="space-y-2 lg:space-y-4">
@@ -37,7 +38,7 @@ export default function Hero() {
         </div>
 
         {/* Right Image */}
-        <div className="relative  min-h-[200px] max-h-[400px] aspect-[1/1] rounded-l-4xl lg:block z-10 order-2 lg:order-2 bg-transparent">
+        <div className="relative  mt-20 ml-24 min-h-[200px] max-h-[500px] aspect-[1/1] lg:block z-10 order-2 lg:order-2 bg-transparent">
           <Image
             src="/hero-image.png"
             alt="Τεχνικό Σχέδιο Μηχανικής"
@@ -49,6 +50,29 @@ export default function Hero() {
         </div>
       </div>
       
+      <LogoWall
+        className="mt-0 lg:mt-0"
+        logos={[
+          {
+            src: "https://www.cursor.com/assets/images/logo.svg",
+            alt: "Cursor",
+            maxWidth: 35,
+            maxHeight: 35
+          },
+          {
+            src: "/logos/figma.svg",
+            alt: "Figma",
+            maxWidth: 35,
+            maxHeight: 35
+          },
+          {
+            src: "https://railway.com/brand/logo-dark.svg",
+            alt: "Railway",
+            maxWidth: 35,
+            maxHeight: 35
+          }
+        ]}
+      />
 
       <BetaDialog isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
