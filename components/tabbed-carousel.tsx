@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Carousel, CarouselApi, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface Tab {
   icon: string;
@@ -15,6 +16,8 @@ interface Tab {
 export function TabbedCarousel({ tabs }: { tabs: Tab[] }) {
   const [api, setApi] = useState<CarouselApi>();
   const [activeIndex, setActiveIndex] = useState(0);
+  const isMobile = useIsMobile();
+  const [imageSources, setImageSources] = useState<string[]>([]);
 
   useEffect(() => {
     if (!api) return;
@@ -23,6 +26,12 @@ export function TabbedCarousel({ tabs }: { tabs: Tab[] }) {
       setActiveIndex(api.selectedScrollSnap());
     });
   }, [api]);
+
+  useEffect(() => {
+    setImageSources(tabs.map(tab => 
+      tab.mobileImageSrc && isMobile ? tab.mobileImageSrc : tab.imageSrc
+    ));
+  }, [isMobile, tabs]);
 
   const handleTabClick = (index: number) => {
     api?.scrollTo(index);
@@ -41,7 +50,7 @@ export function TabbedCarousel({ tabs }: { tabs: Tab[] }) {
                     <div className="relative overflow-hidden rounded-2xl border border-foreground/10">
                       <AspectRatio ratio={3848/2648}>
                         <Image
-                          src={tab.mobileImageSrc ? (window.innerWidth <= 768 ? tab.mobileImageSrc : tab.imageSrc) : tab.imageSrc}
+                          src={imageSources[index] || tab.imageSrc}
                           alt={tab.label}
                           fill
                           className="object-cover"
