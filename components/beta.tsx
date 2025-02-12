@@ -114,13 +114,29 @@ export function BetaDialog({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: 
       <DialogContent>
         <DialogHeader>
           <DialogTitle className="text-center">
-            {isSubmitted ? "🎉 Thank you for joining!" : "Join Beta Waiting List"}
+            {isSubmitted ? "🎉 Thank you for joining!" : "Join Private Beta"}
           </DialogTitle>
         </DialogHeader>
 
         {!isSubmitted ? (
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-4">
+              <div className="space-y-3">
+                <h4 className="font-semibold">What is Private Beta?</h4>
+                <p className="text-sm text-muted-foreground">
+                  Our private beta is an exclusive early access program where:
+                </p>
+                <ul className="mt-1 space-y-1 text-sm text-muted-foreground list-disc pl-4">
+                  <li>You get early access to all features</li>
+                  <li>You can influence product development</li>
+                  <li>You&apos;ll receive priority support</li>
+                  <li>You can manage unlimited projects</li>
+                </ul>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  We&apos;ll notify you when we&apos;re ready to launch.
+                </p>
+              </div>
+
               <Input
                 type="text"
                 placeholder="Full Name"
@@ -219,7 +235,7 @@ export function BetaDialog({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: 
                 You&apos;re on the list!
               </h3>
               <p className="text-sm text-muted-foreground">
-                We&apos;ll let you know when we&apos;re ready.
+                We&apos;ll send you an email when we&apos;re ready to launch.
               </p>
             </div>
 

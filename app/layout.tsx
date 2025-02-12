@@ -1,9 +1,9 @@
-import { CookieConsentBanner } from '@/components/CookieConsentBanner';
+import localFont from "next/font/local";
+import { HeroPillSecond } from "@/components/beta";
+import { CookieConsentBanner } from "@/components/CookieConsentBanner";
 import { Footer } from '@/components/Footer';
 import { Navbar } from '@/components/Navbar';
-import { HeroPillSecond } from "@/components/beta";
 import '@/app/globals.css';
-import localFont from "next/font/local";
 import type { Metadata } from "next";
 
 const geistSans = localFont({
@@ -39,7 +39,7 @@ export default function RootLayout({
           <Navbar />
         </div>
 
-        <main className="items-center justify-center max-w-7xl mx-auto px-4 pt-20">
+        <main className="items-center justify-center max-w-7xl mx-auto px-4">
           {children}
         </main>
 

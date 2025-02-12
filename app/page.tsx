@@ -3,11 +3,46 @@ import { FeatureBlock } from "@/components/blocks/feature-block";
 import { FeatureList } from "@/components/blocks/feature-list";
 import Hero from "@/components/Hero";
 import { FaqSection } from "@/components/sections/faq-section";
-
+import { TabbedCarousel } from "@/components/tabbed-carousel";
 export default function Home() {
   return (
     <main>
       <Hero />
+
+      <TabbedCarousel
+        tabs={[
+          {
+            icon: "wiki",
+            label: "Dashboard",
+            imageSrc: "/wiki-screenshot.png",
+          },
+          {
+            icon: "docs",
+            label: "Opportunities",
+            imageSrc: "/opp-screenshot.png",
+          },
+          {
+            icon: "projects",
+            label: "Pages",
+            imageSrc: "/pages-screenshot.png",
+          },
+          {
+            icon: "tasks",
+            label: "Tasks",
+            imageSrc: "/tasks-screenshot.png",
+          },
+          {
+            icon: "notes",
+            label: "Notes",
+            imageSrc: "/notes-screenshot.png",
+          },
+
+          // Add other tabs as needed
+        ]}
+      />
+
+
+
       <FeatureBlock 
         id="opportunities"
         heading="Ανακάλυψε έργα παντού! 🎯"
