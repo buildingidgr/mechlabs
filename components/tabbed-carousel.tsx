@@ -39,7 +39,7 @@ export function TabbedCarousel({ tabs }: { tabs: Tab[] }) {
 
   return (
     <section className="container mx-auto max-w-7xl pb-36">
-      <div className="grid grid-cols-1 gap-12">
+      <div className="grid grid-cols-1 gap-4">
         {/* Image Carousel */}
         <div className="relative">
           <Carousel setApi={setApi} opts={{ skipSnaps: true }}>

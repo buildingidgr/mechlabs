@@ -31,29 +31,33 @@ export default function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 pt-2 lg:pt-4">
               <Button size="lg" className="bg-primary hover:bg-primary/70" onClick={() => setIsOpen(true)}>
-                 Join waiting list for private Beta
+                Join waiting list for private Beta
               </Button>
             </div>
+            
             <LogoWall
-        className="mt-0 lg:mt-0"
-        logos={[
-          {
-            src: "https://www.cursor.com/assets/images/logo.svg",
-            alt: "Cursor",
-            maxWidth: 35,
-            maxHeight: 35
-          },
-          {
-            src: "/logos/figma.svg",
-            alt: "Figma",
-            maxWidth: 35,
-            maxHeight: 35
-          },
-          {
-            src: "https://railway.com/brand/logo-dark.svg",
-            alt: "Railway",
-            maxWidth: 35,
-            maxHeight: 35
+              className="mt-0 lg:mt-0"
+              logos={[
+                {
+                  src: "https://www.cursor.com/assets/images/logo.svg",
+                  alt: "Cursor",
+                  maxWidth: 35,
+                  maxHeight: 35
+                },
+                {
+                  src: "/logos/figma.svg",
+                  alt: "Figma",
+                  maxWidth: 35,
+                  maxHeight: 35
+                },
+                {
+                  src: "https://railway.com/brand/logo-dark.svg",
+                  alt: "Railway",
+                  maxWidth: 35,
+                  maxHeight: 35
+                }
+              ]}
+            />
           </div>
         </div>
 
