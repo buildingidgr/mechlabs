@@ -17,7 +17,7 @@ export function BetaConfirmationEmail({ name }: { name: string }) {
           <Section style={content}>
             <Text style={heading}>Hi {name},</Text>
             <Text style={paragraph}>
-              Thanks for joining our beta waiting list! We'll notify you as soon as we're ready to launch.
+              Thanks for joining our beta waiting list! We&apos;ll notify you as soon as we&apos;re ready to launch.
             </Text>
             <Text style={paragraph}>
               In the meantime, feel free to check out our latest updates on our blog.

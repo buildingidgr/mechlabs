@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import '@/app/globals.css';
-import { Navbar } from '@/components/Navbar';
-import { Footer } from '@/components/Footer';
 import { CookieConsentBanner } from '@/components/CookieConsentBanner';
+import { Footer } from '@/components/Footer';
+import { Navbar } from '@/components/Navbar';
 import { HeroPillSecond } from "@/components/beta";
+import '@/app/globals.css';
+import localFont from "next/font/local";
+import type { Metadata } from "next";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",

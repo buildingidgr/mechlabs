@@ -1,22 +1,17 @@
 'use client'
 import { useState } from "react";
+import { CheckCircle2, AlertTriangle } from "lucide-react";
+import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogDescription,
   DialogClose,
 } from "@/components/ui/dialog";
-import { HeroPill } from "@/components/ui/hero-pill"
+import { HeroPill } from "@/components/ui/hero-pill";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/components/ui/button";
-import { CheckCircle2, AlertTriangle } from "lucide-react";
-import { Resend } from 'resend';
-import { BetaConfirmationEmail } from "@/components/emails/beta-confirmation";
-import { render } from "@react-email/render";
 
 export function BetaDialog({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: (isOpen: boolean) => void }) {
   const [email, setEmail] = useState("");
@@ -221,10 +216,10 @@ export function BetaDialog({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: 
             
             <div className="space-y-3">
               <h3 className="text-2xl font-semibold tracking-tight">
-                You're on the list!
+                You&apos;re on the list!
               </h3>
-              <p className="text-muted-foreground">
-                We've added you to the waiting list. You'll be the first to know when we launch!
+              <p className="text-sm text-muted-foreground">
+                We&apos;ll let you know when we&apos;re ready.
               </p>
             </div>
 

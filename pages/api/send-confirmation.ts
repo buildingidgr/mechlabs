@@ -1,8 +1,8 @@
+import crypto from 'crypto';
+import { render } from '@react-email/render';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { Resend } from 'resend';
 import { BetaConfirmationEmail } from '@/components/emails/beta-confirmation';
-import { render } from '@react-email/render';
-import crypto from 'crypto';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
