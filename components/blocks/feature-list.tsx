@@ -31,7 +31,7 @@ export function FeatureList({
       title: "Έγγραφα",
       description: "Δημιούργησε επαγγελματικά έγγραφα με AI υποστήριξη και έξυπνα εργαλεία",
       href: "/docs",
-      iconSrc: "/documents.svg"
+      iconSrc: "/book.svg"
   },
   {
       title: "Βιβλιοθήκη",

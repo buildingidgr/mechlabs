@@ -351,14 +351,14 @@ function FaqItem({ faq, index: _index }: FaqItemProps) {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-start justify-between gap-4 group/faq"
       >
-        <h4 className="text-lg font-medium text-left text-neutral-900 dark:text-neutral-100 group-hover/faq:text-blue-500">
+        <h4 className="text-lg font-medium text-left text-neutral-900 dark:text-background group-hover/faq:text-primary">
           {faq.question}
         </h4>
         <IconChevronDown
           className={cn(
             "w-5 h-5 flex-shrink-0 text-neutral-400 transition-transform duration-200 mt-1",
             isOpen && "transform rotate-180",
-            "group-hover/faq:text-blue-500"
+            "group-hover/faq:text-primary"
           )}
         />
       </button>

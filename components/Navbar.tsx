@@ -39,6 +39,7 @@ function smoothScrollTo(targetPosition: number, duration: number) {
 
 export function Navbar() {
   const [value, setValue] = React.useState("")
+  const triggerRef = React.useRef<HTMLButtonElement>(null)
 
   const _icons: Record<string, string> = {
     opportunities: '/icons/briefcase.svg',
@@ -111,8 +112,8 @@ export function Navbar() {
           <NavigationMenuList className="gap-1">
             <NavigationMenuItem value="product">
               <NavigationMenuTrigger 
+                ref={triggerRef}
                 className="px-4 py-2 text-base font-medium data-[state=open]:bg-accent data-[state=open]:text-accent-foreground"
-                onClick={(e) => e.preventDefault()}
               >
                 Product
               </NavigationMenuTrigger>
@@ -133,7 +134,10 @@ export function Navbar() {
                           const offsetPosition = elementPosition + window.pageYOffset - headerOffset
 
                           smoothScrollTo(offsetPosition, 1000)
-                          setValue("")
+                          setTimeout(() => {
+                            setValue("")
+                            triggerRef.current?.blur()
+                          }, 100)
                         }
                       }}
                     >
