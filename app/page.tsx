@@ -15,11 +15,13 @@ export default function Home() {
             icon: "wiki",
             label: "Dashboard",
             imageSrc: "/wiki-screenshot.png",
+            mobileImageSrc: "/wiki-screenshot-mobile.png"
           },
           {
             icon: "docs",
             label: "Opportunities",
             imageSrc: "/opp-screenshot.png",
+            mobileImageSrc: "/opp-screenshot-mobile.png"
           },
           {
             icon: "projects",

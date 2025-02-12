@@ -13,7 +13,7 @@ export default function Hero() {
     <div className="flex flex-col bg-background relative px-4">
       <div className="grid lg:grid-cols-[2fr_1.5fr] gap-2 items-center">
         {/* Left Content */}
-        <div className="py-2 lg:py-2 order-2 lg:order-1">
+        <div className="py-2 lg:py-2 order-1 lg:order-1">
           <div className="space-y-2 lg:space-y-4">
             <div>
               <Badge variant="secondary" className="mb-1 lg:mb-2">
@@ -37,7 +37,7 @@ export default function Hero() {
         </div>
 
         {/* Right Image */}
-        <div className="relative  min-h-[200px] max-h-[400px] aspect-[1/1] rounded-l-4xl lg:block z-10 order-1 lg:order-2 bg-transparent">
+        <div className="relative  min-h-[200px] max-h-[400px] aspect-[1/1] rounded-l-4xl lg:block z-10 order-2 lg:order-2 bg-transparent">
           <Image
             src="/hero-image.png"
             alt="Τεχνικό Σχέδιο Μηχανικής"

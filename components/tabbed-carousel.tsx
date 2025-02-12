@@ -9,6 +9,7 @@ interface Tab {
   icon: string;
   label: string;
   imageSrc: string;
+  mobileImageSrc?: string;
 }
 
 export function TabbedCarousel({ tabs }: { tabs: Tab[] }) {
@@ -40,7 +41,7 @@ export function TabbedCarousel({ tabs }: { tabs: Tab[] }) {
                     <div className="relative overflow-hidden rounded-2xl border border-foreground/10">
                       <AspectRatio ratio={3848/2648}>
                         <Image
-                          src={tab.imageSrc}
+                          src={tab.mobileImageSrc ? (window.innerWidth <= 768 ? tab.mobileImageSrc : tab.imageSrc) : tab.imageSrc}
                           alt={tab.label}
                           fill
                           className="object-cover"
