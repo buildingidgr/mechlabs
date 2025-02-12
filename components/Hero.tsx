@@ -34,6 +34,26 @@ export default function Hero() {
                  Join waiting list for private Beta
               </Button>
             </div>
+            <LogoWall
+        className="mt-0 lg:mt-0"
+        logos={[
+          {
+            src: "https://www.cursor.com/assets/images/logo.svg",
+            alt: "Cursor",
+            maxWidth: 35,
+            maxHeight: 35
+          },
+          {
+            src: "/logos/figma.svg",
+            alt: "Figma",
+            maxWidth: 35,
+            maxHeight: 35
+          },
+          {
+            src: "https://railway.com/brand/logo-dark.svg",
+            alt: "Railway",
+            maxWidth: 35,
+            maxHeight: 35
           </div>
         </div>
 

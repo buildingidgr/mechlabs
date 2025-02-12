@@ -46,3 +46,25 @@ next-env.d.ts
 # IDE
 .vscode
 .idea
+
+# Add to existing .gitignore
+*.log
+*.sqlite
+*.sql
+*.dump
+*.DS_Store
+*.zip
+*.tar.gz
+*.pdf
+*.psd
+*.ai
+*.mov
+*.mp4
+package-lock.json  # If you're using yarn
+yarn.lock          # If you're using npm
+
+# Images
+public/*.png
+public/*.jpg
+public/*.jpeg
+*.mov
