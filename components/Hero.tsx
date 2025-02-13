@@ -40,12 +40,12 @@ export default function Hero() {
         </div>
 
         {/* Right Image */}
-        <div className="relative mt-16 ml-0 min-h-[200px] max-h-[500px] aspect-[1/1.13] lg:block z-10 order-2 lg:order-2 bg-transparent flex justify-end items-end">
+        <div className="relative mt-16 ml-0 min-h-[200px] max-h-[400px] aspect-[1/1.13] lg:block z-10 order-2 lg:order-2 bg-transparent flex justify-end items-end">
           <Image
             src="/1.svg"
             alt="Τεχνικό Σχέδιο Μηχανικής"
             fill
-            className="object-cover object-left scale-x-[-1]"
+            className="object-cover"
             priority
             style={{ background: 'transparent' }}
           />
