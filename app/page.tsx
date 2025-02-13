@@ -31,13 +31,13 @@ export default function Home() {
           },
           {
             icon: "tasks-icon.svg",
-            label: "Tasks",
+            label: "Projects",
             imageSrc: "/tasks-screenshot.png",
             mobileImageSrc: "/tasks-screenshot-mobile.png"
             },
           {
             icon: "notes-icon.svg",
-            label: "Notes",
+            label: "Knowledge Base",
             imageSrc: "/notes-screenshot.png",
             mobileImageSrc: "/notes-screenshot-mobile.png"
           },
