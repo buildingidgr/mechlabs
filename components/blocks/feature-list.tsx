@@ -37,25 +37,25 @@ export function FeatureList({
       title: "Βιβλιοθήκη",
       description: "Όλη η τεχνική γνώση στα χέρια σου - νομοθεσία, διαδικασίες και συμβουλές",
       href: "/library",
-      iconSrc: "/library.svg"
+      iconSrc: "/bookshelf-fill.svg"
   },
   {
       title: "Έργα",
       description: "Οργάνωσε και παρακολούθησε τα έργα σου με Kanban boards και αυτοματισμούς",
       href: "/projects",
-      iconSrc: "/projects.svg"
+      iconSrc: "/building2-fill.svg"
   },
   {
       title: "Mechlabs AI",
       description: "Ο έξυπνος βοηθός σου που προσαρμόζεται στις ανάγκες του έργου σου",
       href: "/ai",
-      iconSrc: "/code1.svg"
+      iconSrc: "/code-square-fill.svg"
   },
   {
       title: "Πρότυπα",
       description: "Επαγγελματικά πρότυπα για κάθε περίπτωση, έτοιμα για άμεση χρήση",
       href: "/templates",
-      iconSrc: "/templates.svg"
+      iconSrc: "/brush2-fill.svg"
   }
     
   ]
