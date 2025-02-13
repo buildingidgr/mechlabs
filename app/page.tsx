@@ -12,31 +12,34 @@ export default function Home() {
       <TabbedCarousel
         tabs={[
           {
-            icon: "wiki",
+            icon: "dashboard-icon.svg",
             label: "Dashboard",
             imageSrc: "/wiki-screenshot.png",
             mobileImageSrc: "/wiki-screenshot-mobile.png"
           },
           {
-            icon: "docs",
+            icon: "opportunities-icon.svg",
             label: "Opportunities",
             imageSrc: "/opp-screenshot.png",
             mobileImageSrc: "/opp-screenshot-mobile.png"
           },
           {
-            icon: "projects",
+            icon: "projects-icon.svg",
             label: "Pages",
             imageSrc: "/pages-screenshot.png",
+            mobileImageSrc: "/pages-screenshot-mobile.png"
           },
           {
-            icon: "tasks",
+            icon: "tasks-icon.svg",
             label: "Tasks",
             imageSrc: "/tasks-screenshot.png",
-          },
+            mobileImageSrc: "/tasks-screenshot-mobile.png"
+            },
           {
-            icon: "notes",
+            icon: "notes-icon.svg",
             label: "Notes",
             imageSrc: "/notes-screenshot.png",
+            mobileImageSrc: "/notes-screenshot-mobile.png"
           },
 
           // Add other tabs as needed
