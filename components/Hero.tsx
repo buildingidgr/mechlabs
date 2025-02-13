@@ -40,9 +40,9 @@ export default function Hero() {
         </div>
 
         {/* Right Image */}
-        <div className="relative mt-16 ml-0 min-h-[200px] max-h-[800px] aspect-[1/1] lg:block z-10 order-2 lg:order-2 bg-transparent flex justify-end items-end">
+        <div className="relative mt-16 ml-0 min-h-[200px] max-h-[600px] aspect-[1/2.64] lg:block z-10 order-2 lg:order-2 bg-transparent flex justify-end items-end">
           <Image
-            src="/hero-image.png"
+            src="/hero-image.svg"
             alt="Τεχνικό Σχέδιο Μηχανικής"
             fill
             className="object-cover object-left"
