@@ -25,11 +25,11 @@ export default function Hero() {
               </h1>
             </div>
             
-            <p className="lg:text-3xl text-3xl font-semibold text-foreground/70 max-w-xl">
+            <p className="lg:text-2xl text-2xl font-semibold text-foreground/70 max-w-xl">
             Η επόμενη γενιά λογισμικού για μηχανικούς είναι εδώ
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 pt-2 lg:pt-4">
+            <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 pt-0 lg:pt-0">
               <Button size="lg" className="bg-primary hover:bg-primary/70" onClick={() => setIsOpen(true)}>
                 Join waiting list for private Beta
               </Button>
@@ -40,12 +40,12 @@ export default function Hero() {
         </div>
 
         {/* Right Image */}
-        <div className="relative mt-16 ml-0 min-h-[200px] max-h-[600px] aspect-[1/2.64] lg:block z-10 order-2 lg:order-2 bg-transparent flex justify-end items-end">
+        <div className="relative mt-16 ml-0 min-h-[200px] max-h-[500px] aspect-[1/1.13] lg:block z-10 order-2 lg:order-2 bg-transparent flex justify-end items-end">
           <Image
-            src="/hero-image.svg"
+            src="/1.svg"
             alt="Τεχνικό Σχέδιο Μηχανικής"
             fill
-            className="object-cover object-left"
+            className="object-cover object-left scale-x-[-1]"
             priority
             style={{ background: 'transparent' }}
           />
