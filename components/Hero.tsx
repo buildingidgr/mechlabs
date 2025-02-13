@@ -30,29 +30,12 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 pt-0 lg:pt-0">
-              <Button size="lg" className="bg-primary hover:bg-primary/70" onClick={() => setIsOpen(true)}>
+              <Button size="lg" className="bg-primary hover:bg-primary/50" onClick={() => setIsOpen(true)}>
                 Join waiting list for private Beta
               </Button>
             </div>
             
-
-          </div>
-        </div>
-
-        {/* Right Image */}
-        <div className="relative mt-16 ml-0 min-h-[200px] max-h-[400px] aspect-[1/1.13] lg:block z-10 order-2 lg:order-2 bg-transparent flex justify-end items-end">
-          <Image
-            src="/1.svg"
-            alt="Τεχνικό Σχέδιο Μηχανικής"
-            fill
-            className="object-cover"
-            priority
-            style={{ background: 'transparent' }}
-          />
-        </div>
-      </div>
-      
-      <LogoWall
+            <LogoWall
         className="mt-0 lg:mt-0"
         logos={[
           {
@@ -75,6 +58,23 @@ export default function Hero() {
           }
         ]}
       />
+
+          </div>
+        </div>
+
+        {/* Right Image */}
+        <div className="relative mt-16 ml-0 min-h-[200px] max-h-[400px] aspect-[1/1.13] lg:block z-10 order-2 lg:order-2 bg-transparent flex justify-end items-end">
+          <Image
+            src="/1.svg"
+            alt="Τεχνικό Σχέδιο Μηχανικής"
+            fill
+            className="object-cover"
+            priority
+            style={{ background: 'transparent' }}
+          />
+        </div>
+      </div>
+      
 
       <BetaDialog isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
