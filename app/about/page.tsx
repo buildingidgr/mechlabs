@@ -1,68 +1,108 @@
 import { FeaturesSectionWithHoverEffects } from "@/components/blocks/feature-section-with-hover-effects";
+import { FeatureBlockLibrary } from "@/components/blocks/feauture-block-library";
+import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="container mx-auto px-4 py-24">
-      <div className="max-w-4xl mx-auto">
-
-                  {/* Features Section */}
-                  <div className="mt-2 lg:mt-2 scroll-mt-32">
-        <FeaturesSectionWithHoverEffects />
+    <div className="container mx-auto px-4 py-16">
+      <div className="max-w-4xl mx-auto mb-12">
+        <h1 className="text-2xl font-medium text-foreground/30 mb-4">Η ιστορία μας</h1>
+        <h2 className="text-5xl font-bold tracking-tight mb-12">
+          Βελτιώνουμε την καθημερινότητα κάθε μηχανικού
+        </h2>
       </div>
-        <h1 className="text-4xl font-bold text-primary mb-12">Η Ιστορία Μας</h1>
 
-        <section className="space-y-6 mb-20">
-          <p className="text-lg leading-relaxed">
-            Από το 2011 που «ακούστηκε» για πρώτη φορά η Η.Τ.Κ. μια ομάδα μηχανικών που ασχολείται 
-            ιδιαίτερα με την πολεοδομική νομοθεσία μετακίνησε εμπειρία, εξειδίκευση και γνώση στην 
-            ιδέα δημιουργίας μιας κοινότητας ειδικευμένων υπηρεσιών γύρω από το μεγάλο πλαίσιο που θα 
-            καθιερώσει η «Ταυτότητα». Στόχος μας είναι η διεύρυνση της γνώσης μέσω της πλατφόρμας 
-            ώστε να παρέχουμε τις υπηρεσίες μας με ασφάλεια, τίμια και προπαντος χωρίς εκπλήξεις.
+      <FeaturesSectionWithHoverEffects id="core-values" />
+
+      <div className="max-w-[1392px] mx-auto space-y-24">
+        {/* Section 1 - Problem Statement */}
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="relative aspect-[2/2]">
+            <Image
+              src="/about-02.svg"
+              alt="Team working"
+              fill
+              className="object-contain"
+            />
+          </div>
+          <p className="text-xl leading-snug">
+            Το 2025, μια ομάδα μηχανικών παρατήρησε μια κοινή πρόκληση: Πολλές ομάδες 
+            αντιμετώπιζαν δυσκολίες με την έγκαιρη ενημέρωση, την συνεργασία και την 
+            πρόσβαση σε αξιόπιστες πηγές. Αποφασίσαμε να δοκιμάσουμε μια νέα προσέγγιση 
+            - όχι ως η τελική λύση, αλλά ως ένα βήμα προς την καλύτερη καθημερινότητα.
           </p>
         </section>
 
-        <section className="space-y-12">
-          <h2 className="text-3xl font-bold text-primary">Πιστεύουμε</h2>
+        {/* Section 2 - Solution */}
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="relative aspect-square md:order-last">
+            <Image
+              src="/about-01.svg"
+              alt="Office work"
+              fill
+              className="object-contain"
+            />
+          </div>
+          <p className="text-xl leading-snug">
+            Δουλεύουμε σε μια πλατφόρμα που:
+            <span className="block h-4" />
+            • Βοηθά στη δημιουργία εγγράφων<br/>
+            • Διασφαλίζει καλύτερη συνεργασία<br/>
+            • Εκμεταλλεύεται τις νέες τεχνολογίες<br/>
+            • Προσαρμόζεται στις ανάγκες σας<br/>
+            <span className="block h-4" />
+            Μια διαδικασία βελτίωσης που βασίζεται στη συνεργασία και την εμπειρία σας.
+          </p>
+        </section>
 
-          <div className="space-y-8">
-            <article>
-              <h3 className="text-2xl font-semibold mb-4">Στην δύναμη της τεχνολογίας</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Η τεχνολογία είναι το εργαλείο. Απαιτείται όμως η προσαρμογή στις ανάγκες του 
-                ομιχλώδους τοπίου στο οποίο δραστηριοποιούνται οι μηχανικοί σήμερα. Όσο μοναδική 
-                είναι η πρόκληση, τόσο εξειδικευμένη πρέπει να είναι η υποστήριξη που χρειάζεται 
-                ο μέσος μηχανικός. Οι δυνατότητες της πλατφόρμας επαναπροσδιορίζονται συνεχώς 
-                με αυτό τον γνώμονα.
-              </p>
-            </article>
+        {/* Section 3 - Community Focus */}
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="relative aspect-[4/5]">
+            <Image
+              src="/about-03.svg"
+              alt="Construction"
+              fill
+              className="object-contain"
+            />
+          </div>
+          <p className="text-xl leading-snug">
+            Κάθε βήμα μας καθοδηγείται από την κοινότητα. 
+            <span className="block h-4" />
+            Ακούμε προσεκτικά τα σχόλια και τις προτάσεις σας, προσπαθώντας να 
+            δημιουργήσουμε εργαλεία που πραγματικά βοηθάνε.
+            <span className="block h-4" />
+            Είμαστε εδώ να μάθουμε και να βελτιωθούμε μαζί σας - με ταπεινότητα 
+            και υπομονή.
+          </p>
+        </section>
 
-            <article>
-              <h3 className="text-2xl font-semibold mb-4">Στην δύναμη της αλληλοβοήθειας</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Πολλά από τα προβλήματα που αντιμετωπίζουμε στην καθημερινές υλοποιήσεις είναι 
-                τόσο εξειδικευμένα που κανένα κανονιστικό πλαίσιο δεν τα ρυθμίζει. Παρ&apos; αυτά 
-                εμείς καλούμαστε να πάρουμε αποφάσεις άμεσα. Η «σπάνια» περίπτωση όμως που 
-                εμφανίζεται σε μια γωνιά της χώρας μπορεί να είναι κάτι γνώριμο σε μια βάση 
-                δεδομένων που συγκεντρώνει πληροφορίες από όλη την επικράτεια.
-              </p>
-            </article>
-
-            <article>
-              <h3 className="text-2xl font-semibold mb-4">Στην δύναμη της εξειδίκευσης</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Ας το παραδεχτούμε, ο μέσος μηχανικός δραστηριοποιείται σε πολλά πεδία. Ας 
-                παραδεχτούμε και κάτι ακόμη, αυτό δεν μπορεί να συνεχιστεί για πάντα. Νομοτελειακά 
-                ή θα πρέπει να αναζητηθεί «έτοιμη» εξειδικευμένη γνώση ή να εγκαταλειφθούν πεδία. 
-                Σε κάθε περίπτωση η buildingid.gr σας προκαλεί, είτε να εξειδικευτείτε και να 
-                «δώσετε» είτε να «λάβετε» γνώση που θα σας φέρει καλές αμοιβές.
-              </p>
-            </article>
+        {/* Add Timeline Section */}
+        <section className="py-16">
+          <h3 className="text-4xl font-bold text-center mb-16">Προς το Μέλλον - Μαζί Σας</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="p-6 border-l-4 border-primary">
+              <h4 className="text-xl font-bold mb-2">Ιαν 2025</h4>
+              <p>Ξεκινήσαμε ως μικρή ομάδα με έναν απλό στόχο</p>
+            </div>
+            <div className="p-6 border-l-4 border-primary">
+              <h4 className="text-xl font-bold mb-2">Μαρ 2025</h4>
+              <p>Πρώτες δοκιμές βασικών λειτουργιών</p>
+            </div>
+            <div className="p-6 border-l-4 border-primary">
+              <h4 className="text-xl font-bold mb-2">Σεπ 2025</h4>
+              <p>Μια μικρή ομάδα πρώτων χρηστών μας βοηθά να βελτιωθούμε</p>
+            </div>
           </div>
         </section>
 
-        <div className="mt-16 pt-8 border-t">
-          <p className="text-lg font-semibold">Χριστόφορος Ζερμάν</p>
-          <p className="text-gray-600">Πολιτικός Μηχανικός</p>
+        {/* Quote Section */}
+        <div className="text-center py-16">
+          <blockquote className="text-4xl font-bold italic">
+            «Μαθαίνουμε κάθε μέρα - και εσείς είστε οι καλύτεροι δάσκαλοι»
+          </blockquote>
+          <p className="mt-4 text-xl text-muted-foreground">
+            Η ομάδα της Mechlabs
+          </p>
         </div>
       </div>
     </div>
