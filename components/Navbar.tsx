@@ -122,7 +122,7 @@ export function Navbar() {
                   {menuItems.map((item) => (
                     <Link 
                       key={item.id}
-                      href={`#${item.id}`}
+                      href={`/#${item.id}`}
                       legacyBehavior
                       passHref
                       onClick={(e) => {
