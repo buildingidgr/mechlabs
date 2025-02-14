@@ -1,6 +1,5 @@
-import { FeaturesSectionWithHoverEffects } from "@/components/blocks/feature-section-with-hover-effects";
-import { FeatureBlockLibrary } from "@/components/blocks/feauture-block-library";
 import Image from "next/image";
+import { FeaturesSectionWithHoverEffects } from "@/components/blocks/feature-section-with-hover-effects";
 
 export default function About() {
   return (

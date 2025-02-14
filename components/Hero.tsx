@@ -4,8 +4,8 @@ import { useState } from "react"
 import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { BetaDialog } from "./beta"
 import { LogoWall } from "@/components/ui/logo-wall"
+import { BetaDialog } from "./beta"
 
 export default function Hero() {
   const [isOpen, setIsOpen] = useState(false);
